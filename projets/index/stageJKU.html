@@ -1,212 +1,140 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Projets</title>
-    <link rel="stylesheet" href="../../styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <style>
-        /* Styles pour les sections */
-        .projects-section {
-            margin: 40px 0;
-        }
-
-        .projects-section h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #000000;
-        }
-
-        /* Styles pour les cartes de projets */
-        .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .project-card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            text-align: center;
-            width: 300px;
-        }
-
-        .project-card h3 {
-            margin: 10px 0;
-            font-size: 18px;
-            color: #333;
-        }
-
-        .project-card a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: #000000;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .project-card a:hover {
-            background-color: #000000;
-            color: #fff;
-        }
-        img[src="../../image/jku3.jpeg"] {
-            display: block; /* Pour centrer horizontalement */
-            margin: 50px auto; /* Ajoute une marge en haut et en bas, et centre verticalement */
-            max-width: 100%; /* Largeur maximale de l'image */
-            max-height: 400px; /* Hauteur maximale de l'image */
-            border-radius: 10px; /* Coins arrondis */
-        }
-
-        /* Styles CSS spécifiques aux trois images en bas de la page */
-        .image-row {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        .image-row img {
-            display: block;
-            margin: 0;
-            max-width: 30%;
-            max-height: 400px;
-            border-radius: 10px;
-        }
-        
-        /* Style pour la carte */
-        #map {
-            height: 450px;
-            width: 100%;
-            max-width: 800px;
-            margin: 20px auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage ERASMUS — JKU de Linz — Rémi Pierron</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>if (localStorage.getItem("theme") === "dark") { document.documentElement.setAttribute("data-theme", "dark"); }</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <style>
+    #map { height: 420px; width: 100%; max-width: 800px; margin: 20px auto; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,.12); }
+    .photo-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 16px 0; }
+    .photo-row img { border-radius: 10px; max-width: 30%; object-fit: cover; flex: 1 1 200px; }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="title">
-                Mon stage à la JKU de Linz
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="../../index.html">Accueil</a></li>
-                    <li><a href="../../projects.html">Projets</a></li>
-                    <li><a href="../../about.html">À propos de moi</a></li>
-                    <li><a href="../../debrief.html">Mes études</a></li>
-                    <li><a href="../../contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <section>
-        <div class="pills-container">
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../../index.html" class="navbar-brand"><span class="brand-dot"></span>Rémi Pierron</a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="navbar-nav">
+        <li><a href="../../index.html">Accueil</a></li>
+        <li><a href="../../projects.html">Projets</a></li>
+        <li><a href="../../about.html">À propos</a></li>
+        <li><a href="../../debrief.html">Mes études</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-            <div class="project-note">🇪🇺 ERASMUS de trois mois / Avril - Juin 2025</div>
-        </div>
+  <div class="page-wrapper">
+
+    <div class="page-banner fade-in">
+      <div class="section-label">Stage ERASMUS — Avril/Juin 2025</div>
+      <h1>Mon stage à la JKU de Linz 🇦🇹</h1>
+      <p>Trois mois en Autriche dans le département des statistiques de la Johannes Kepler Universität.</p>
+    </div>
+    <a href="../../projects.html" class="back-link">Retour aux projets</a>
+
+    <!-- Intro stage -->
+    <section class="project-section reveal">
+      <img src="../../image/jku3.jpeg" alt="Johannes Kepler Universität Linz" class="content-img">
+      <h2>🇦🇹 Une immersion au département des statistiques de la JKU de Linz</h2>
+      <p>
+        La <strong>Johannes Kepler Universität Linz</strong> est une université autrichienne reconnue pour son excellence
+        en recherche et enseignement, notamment dans le domaine des statistiques. Mon stage au sein de ce département
+        m'a permis de découvrir des méthodes avancées d'analyse de données et de participer à des projets innovants
+        en science des données.
+      </p>
     </section>
 
-    <section>
-        <h2>🇦🇹 Une immersion au département des statistiques de la JKU de Linz</h2>
-        <img loading="lazy" decoding="async" src="../../image/jku3.jpeg" alt="Description de votre image">
-        <p><span>La <strong>Johannes Kepler Universität Linz</strong> est une université autrichienne reconnue pour son excellence en recherche et enseignement, 
-            notamment dans le domaine des statistiques. Mon stage au sein de ce département m'a permis de découvrir des méthodes avancées d'analyse de données 
-            et de participer à des projets innovants en science des données.</span></p>
-    </section>
-
-    <!-- Section des projets informatiques -->
-    <section id="projects-informatique" class="projects-section">
+    <section class="section reveal">
+      <div class="section-heading">
         <h2>🚀 Missions</h2>
-        <div class="projects-container">
-            
-
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="../../image/stock-21.jpeg" alt="Prédiction de la consommation électrique de la ville de Linz">
-                <h3>Prédiction de la consommation électrique de la ville de Linz</h3>
-                <a href="../details/stageJKU_pred_elec.html">Voir le projet</a>
-            </div>
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="../../image/stock-30.jpeg" alt="Etude biostatistique sur l'évolution de l'ADN des levures">
-                <h3>Étude biostatistique sur l'évolution de l'ADN des levures</h3>
-                <a href="../details/stageJKU_biostats.html">Voir le projet</a>
-            </div>
+        <div class="section-heading-line"></div>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img class="project-card-img" src="../../image/stock-21.jpeg" alt="Prédiction électrique Linz" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Prédiction de la consommation électrique de la ville de Linz</div>
+            <a href="../details/stageJKU_pred_elec.html" class="project-card-link">Voir le projet</a>
+          </div>
         </div>
-    </section>
-
-    <section>
-        <br>
-        <p><span>
-            <a href="../../telechargements/stage.pdf" download>Cliquez ici pour télécharger le rapport de stage en français</a>
-            <br>
-            <a href="../../telechargements/internship.pdf" download>Cliquez ici pour télécharger le rapport de stage en anglais</a>
-            <br>
-            <a href="../../telechargements/presentation.pdf" download>Cliquez ici pour télécharger le diaporama de mon oral de stage</a>
-        </span></p>
-        <br>
-    </section>
-
-
-
-    <section>
-        <h2>📍 Localisation de la Johannes Kepler Universität</h2>
-        <div id="map"></div>
-        <p><span>
-            La Johannes Kepler Universität se trouve à Linz, en Autriche. Cette université moderne est située dans un cadre verdoyant, 
-            à proximité du centre-ville.
-        </span></p>
-    </section>
-
-    <section>
-        <h2>⛺️ Et en dehors du cadre universitaire, qu'ai-je découvert ?</h2>
-        <br>
-        <!-- Wrap images in a flex container -->
-        <div class="image-row">
-            <img loading="lazy" decoding="async" src="../../image/at-work5.jpeg" alt="Description de votre image">
-            <img loading="lazy" decoding="async" src="../../image/at-work6.jpeg" alt="Description de votre image">
-            <img loading="lazy" decoding="async" src="../../image/at-work7.jpeg" alt="Description de votre image">
+        <div class="project-card">
+          <img class="project-card-img" src="../../image/stock-30.jpeg" alt="Biostatistiques ADN levures" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Étude biostatistique sur l'évolution de l'ADN des levures</div>
+            <a href="../details/stageJKU_biostats.html" class="project-card-link">Voir le projet</a>
+          </div>
         </div>
-        <br>
-        <br>
-        <p><span>
-            J'ai découvert la culture autrichienne, notamment à travers la gastronomie et les traditions locales. J'ai également eu l'occasion de rencontrer des 
-            étudiants internationaux et de partager des expériences culturelles enrichissantes. Mais ce qui m'a le plus marqué, c'est le lieu où j'ai vécu.
-            Il s'agit d'une ferme communautaire, un endroit alternatif où les gens vivent ensemble, partagent des ressources et pratiquent l'agriculture durable. 
-            J'ai appris à apprécier la simplicité de la vie en communauté. C'était une expérience unique qui m'a permis de me rapprocher de la nature et de découvrir 
-            un mode de vie différent.
-        </span></p>
-    </section>
-    <section>
-        <a href="../../projects.html" class="back-button">Retour aux projets</a>
+      </div>
     </section>
 
-    <footer>
-        <p class="copyright">&copy; 2026 Rémi Pierron</p>
-    </footer>
+    <!-- Téléchargements -->
+    <section class="project-section reveal">
+      <h2>📄 Rapports de stage</h2>
+      <div class="project-links">
+        <a href="../../telechargements/stage.pdf" download class="btn btn-primary">Rapport de stage (FR) →</a>
+        <a href="../../telechargements/internship.pdf" download class="btn btn-primary">Internship report (EN) →</a>
+        <a href="../../telechargements/presentation.pdf" download class="btn btn-primary">Diaporama oral de stage →</a>
+      </div>
+    </section>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script>
-        // Initialiser la carte centrée sur Linz
-        var map = L.map('map').setView([48.3069, 14.2858], 5);
+    <!-- Carte Leaflet -->
+    <section class="project-section reveal">
+      <h2>📍 Localisation de la Johannes Kepler Universität</h2>
+      <div id="map"></div>
+      <p>
+        La Johannes Kepler Universität se trouve à Linz, en Autriche. Cette université moderne est située dans un cadre
+        verdoyant, à proximité du centre-ville.
+      </p>
+    </section>
 
-        // Ajouter une couche de tuiles OpenStreetMap
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+    <!-- Vie en dehors -->
+    <section class="project-section reveal">
+      <h2>⛺️ Et en dehors du cadre universitaire ?</h2>
+      <div class="photo-row">
+        <img src="../../image/at-work5.jpeg" alt="Vie en Autriche" loading="lazy">
+        <img src="../../image/at-work6.jpeg" alt="Vie en Autriche" loading="lazy">
+        <img src="../../image/at-work7.jpeg" alt="Vie en Autriche" loading="lazy">
+      </div>
+      <p>
+        J'ai découvert la culture autrichienne, notamment à travers la gastronomie et les traditions locales. J'ai également
+        eu l'occasion de rencontrer des étudiants internationaux et de partager des expériences culturelles enrichissantes.
+        Mais ce qui m'a le plus marqué, c'est le lieu où j'ai vécu : une ferme communautaire, un endroit alternatif où les
+        gens vivent ensemble, partagent des ressources et pratiquent l'agriculture durable. J'ai appris à apprécier la
+        simplicité de la vie en communauté, une expérience unique qui m'a permis de me rapprocher de la nature et de
+        découvrir un mode de vie différent.
+      </p>
+    </section>
 
-        // Ajouter un marqueur pour Linz
-        var marker = L.marker([48.3069, 14.2858]).addTo(map);
-        marker.bindPopup('<b>Johannes Kepler Universität</b><br>Linz, Autriche').openPopup();
-    </script>
+    <a href="../../projects.html" class="back-link" style="display:inline-flex; margin-bottom: 24px;">Retour aux projets</a>
 
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Rémi Pierron</span>
+      <p>&copy; 2026 — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="../../script/main.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([48.3069, 14.2858], 5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    var marker = L.marker([48.3069, 14.2858]).addTo(map);
+    marker.bindPopup('<b>Johannes Kepler Universität</b><br>Linz, Autriche').openPopup();
+  </script>
 </body>
 </html>

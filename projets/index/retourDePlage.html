@@ -1,125 +1,96 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Projets</title>
-    <link rel="stylesheet" href="../../styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Styles pour les sections */
-        .projects-section {
-            margin: 40px 0;
-        }
-
-        .projects-section h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #000000;
-        }
-
-        /* Styles pour les cartes de projets */
-        .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .project-card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            text-align: center;
-            width: 300px;
-        }
-
-        .project-card h3 {
-            margin: 10px 0;
-            font-size: 18px;
-            color: #333;
-        }
-
-        .project-card a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: #000000;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .project-card a:hover {
-            background-color: #000000;
-            color: #fff;
-        }
-        
-        img[src="../../image/rdp2.jpeg"] {
-            display: block;
-            margin: 50px auto;
-            max-width: 100%;
-            max-height: 400px;
-            border-radius: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alternance — Retour de Plage — Rémi Pierron</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>if (localStorage.getItem("theme") === "dark") { document.documentElement.setAttribute("data-theme", "dark"); }</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="title">
-                Mon alternance à Retour de Plage
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="../../index.html">Accueil</a></li>
-                    <li><a href="../../projects.html">Projets</a></li>
-                    <li><a href="../../about.html">À propos de moi</a></li>
-                    <li><a href="../../debrief.html">Mes études</a></li>
-                    <li><a href="../../contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <section>
-        <h2>🌊 La Science des Données au service d'une bijouterie unique en son genre : Retour de Plage</h2>
-        <img loading="lazy" decoding="async" src="../../image/rdp2.jpeg" alt="Description de votre image">
-        <p><span><strong>Retour de Plage</strong> est une bijouterie artisanale française qui puise son inspiration dans l’univers marin et l’esprit des vacances. Basée sur la 
-            côte atlantique, l’entreprise conçoit et fabrique des bijoux uniques à partir de matériaux naturels et recyclés, comme les coquillages, le bois 
-            flotté ou les perles de verre. Chaque création reflète un style à la fois élégant et décontracté, fidèle à l’identité de la marque : capturer la 
-            beauté simple et authentique des bords de mer. Engagée dans une démarche responsable, Retour de Plage valorise le savoir-faire local et la 
-            production durable, tout en cultivant un lien fort avec ses clients à travers des collections personnalisées et poétiques.</span></p>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../../index.html" class="navbar-brand"><span class="brand-dot"></span>Rémi Pierron</a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="navbar-nav">
+        <li><a href="../../index.html">Accueil</a></li>
+        <li><a href="../../projects.html">Projets</a></li>
+        <li><a href="../../about.html">À propos</a></li>
+        <li><a href="../../debrief.html">Mes études</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <div class="page-banner fade-in">
+      <div class="section-label">Alternance BUT3 — 2025/2026</div>
+      <h1>Mon alternance à Retour de Plage</h1>
+      <p>Science des données au service d'une bijouterie artisanale atlantique.</p>
+    </div>
+    <a href="../../projects.html" class="back-link">Retour aux projets</a>
+
+    <!-- Intro alternance -->
+    <section class="project-section reveal">
+      <img src="../../image/rdp2.jpeg" alt="Retour de Plage" class="content-img">
+      <h2>🌊 La Science des Données au service d'une bijouterie unique en son genre</h2>
+      <p>
+        <strong>Retour de Plage</strong> est une bijouterie artisanale française qui puise son inspiration dans l'univers marin
+        et l'esprit des vacances. Basée sur la côte atlantique, l'entreprise conçoit et fabrique des bijoux uniques à partir de
+        matériaux naturels et recyclés, comme les coquillages, le bois flotté ou les perles de verre. Chaque création reflète
+        un style à la fois élégant et décontracté, fidèle à l'identité de la marque : capturer la beauté simple et authentique
+        des bords de mer. Engagée dans une démarche responsable, Retour de Plage valorise le savoir-faire local et la production
+        durable, tout en cultivant un lien fort avec ses clients à travers des collections personnalisées et poétiques.
+      </p>
     </section>
 
-    <!-- Section des projets informatiques -->
-    <section id="projects-informatique" class="projects-section">
+    <section class="section reveal">
+      <div class="section-heading">
         <h2>🚀 Missions</h2>
-        <div class="projects-container">
-            
-
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="../../image/stock-38.jpeg" alt="Tableaux de Bords Automatisés sur les stocks dormants">
-                <h3>Tableaux de Bords Automatisés sur les stocks dormants</h3>
-                <a href="../details/tdbStockDormants.html">Voir le projet</a>
-            </div>
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="../../image/stock-37.jpeg" alt="Automatisation de mise à jour de tableau de bord par API">
-                <h3>Automatisation de mise à jour de tableau de bord par API</h3>
-                <a href="../details/API_CA.html">Voir le projet</a>
-            </div>
+        <div class="section-heading-line"></div>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img class="project-card-img" src="../../image/stock-38.jpeg" alt="Stocks dormants" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Tableaux de Bords Automatisés sur les stocks dormants</div>
+            <a href="../details/tdbStockDormants.html" class="project-card-link">Voir le projet</a>
+          </div>
         </div>
+        <div class="project-card">
+          <img class="project-card-img" src="../../image/stock-37.jpeg" alt="API CA" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Automatisation de mise à jour de tableau de bord par API</div>
+            <a href="../details/API_CA.html" class="project-card-link">Voir le projet</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img class="project-card-img" src="../../image/stock-48.png" alt="Gestion d'images" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Automatisation de gestion d'images par API</div>
+            <a href="../details/gestionImages.html" class="project-card-link">Voir le projet</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
-        
-        <a href="../../projects.html" class="back-button">Retour</a>
-    </section>
+    <a href="../../projects.html" class="back-link" style="display:inline-flex; margin-bottom: 24px;">Retour aux projets</a>
 
-    <footer>
-        <p class="copyright">&copy; 2026 Rémi Pierron</p>
-    </footer>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Rémi Pierron</span>
+      <p>&copy; 2026 — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="../../script/main.js"></script>
 </body>
 </html>

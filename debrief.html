@@ -1,240 +1,155 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes études</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Styles CSS pour le carousel 3D */
-        .image-container {
-            display: flex;
-            justify-content: center;
-            perspective: 1000px;
-            height: 300px;
-            align-items: center;
-        }
-
-        .carousel-rotator {
-            position: relative;
-            width: 280px;
-            height: 200px;
-            transform-style: preserve-3d;
-            animation: rotateCarousel 16s infinite linear;
-        }
-
-        .image-container:hover .carousel-rotator {
-            animation-play-state: paused;
-        }
-
-        .carousel-item {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transform-style: preserve-3d;
-        }
-
-        .carousel-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-            border: 3px solid #fff;
-            box-shadow: 0 5px 15px rgba(120, 67, 233, 0.3);
-            transition: transform 0.4s, box-shadow 0.4s;
-        }
-
-        .carousel-item:hover img {
-            transform: scale(1.35);
-            box-shadow: 0 25px 50px rgba(120, 67, 233, 0.5);
-            border-color: #7843E9;
-            z-index: 999;
-            cursor: pointer;
-        }
-
-        .carousel-item:nth-child(1) { transform: rotateY(0deg) translateZ(200px); }
-        .carousel-item:nth-child(2) { transform: rotateY(120deg) translateZ(200px); }
-        .carousel-item:nth-child(3) { transform: rotateY(240deg) translateZ(200px); }
-
-        @keyframes rotateCarousel {
-            from { transform: rotateY(0deg); }
-            to { transform: rotateY(360deg); }
-        }
-
-        /* Responsive pour le carousel */
-        @media (max-width: 600px) {
-            .image-container {
-                perspective: none;
-                height: auto;
-            }
-            
-            .carousel-rotator {
-                width: 100%;
-                height: auto;
-                transform: none !important;
-                animation: none;
-                display: flex;
-                gap: 15px;
-                overflow-x: auto;
-                padding: 10px;
-            }
-            
-            .carousel-item {
-                position: relative;
-                width: 200px;
-                height: 140px;
-                transform: none !important;
-                flex-shrink: 0;
-            }
-        }
-
-        /* Styles CSS pour l'image */
-        .image-container {
-            display: flex;
-            justify-content: center;
-        }
-
-        .image-container img {
-            max-width: 100%; /* Largeur maximale de l'image */
-            max-height: 400px; /* Hauteur maximale de l'image */
-            border-radius: 10px; /* Coins arrondis */
-        }
-
-        /* Style CSS pour le titre */
-        h2 {
-            margin-top: 20px; /* Ajoute une marge en haut du titre */
-            margin-bottom: 10px; /* Ajoute une marge en bas du titre */
-        }
-
-        /* Style CSS pour le texte */
-        p {
-            margin-bottom: 20px; /* Ajoute une marge en bas du texte */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes études — Rémi Pierron</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>if (localStorage.getItem("theme") === "dark") { document.documentElement.setAttribute("data-theme", "dark"); }</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="title">
-                Mes études
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="projects.html">Projets</a></li>
-                    <li><a href="about.html">À propos de moi</a></li>
-                    <li><a href="debrief.html">Mes études</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand"><span class="brand-dot"></span>Rémi Pierron</a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="navbar-nav">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="debrief.html">Mes études</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <div class="page-banner fade-in">
+      <div class="section-label">Bilan</div>
+      <h1>Mes études</h1>
+      <p>Retour d'expérience sur mon parcours en BUT Science des Données à l'IUT de Poitiers — campus de Niort.</p>
+    </div>
+
+    <!-- Carousel photos -->
+    <section class="section reveal">
+      <div class="section-label">Ma scolarité et vie étudiante</div>
+      <div class="carousel-wrap">
+        <div class="carousel-rotator">
+          <div class="carousel-item"><img loading="lazy" src="image/at-work3.jpeg" alt="Au travail — Image 1"></div>
+          <div class="carousel-item"><img loading="lazy" src="image/at-work8.jpeg" alt="Vie étudiante — Image 2"></div>
+          <div class="carousel-item"><img loading="lazy" src="image/at-work9.jpeg" alt="Projets étudiants — Image 3"></div>
         </div>
-    </header>
-
-    <section id="about-me">
-        <h2>Ma scolarité et ma vie étudiante</h2>
-        <div class="image-container">
-            <div class="carousel-rotator">
-                <div class="carousel-item">
-                    <img loading="lazy" decoding="async" src="image/at-work3.jpeg" alt="Au travail - Image 1">
-                </div>
-                <div class="carousel-item">
-                    <img loading="lazy" decoding="async" src="image/at-work8.jpeg" alt="Vie étudiante - Image 2">
-                </div>
-                <div class="carousel-item">
-                    <img loading="lazy" decoding="async" src="image/at-work9.jpeg" alt="Projets étudiants - Image 3">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <h2>🧑‍🎓 Mon parcours scolaire</h2>
-        <p><span>J'ai obtenu le Baccalauréat Général en 2023 avec les spécialités Mathématiques et Histoire Géographie Géopolitique Science Politique. 
-            En Première, j'avais en plus la spécialité Physique-Chimie, car je voulais m'orienter en école d'ingénieur.
-            Finalement, je me suis rendu compte que je n'aimais pas cette matière, et j'ai donc décidé de garder les Mathématiques
-            et l'HGGSP en Terminale. Je pense que j'ai fait un bon choix, car l'HGGSP m'a permis d'améliorer ma culture générale ainsi que 
-            mes compétences rédactionnelles.</span></p>
-    </section>
-    <section>
-        <h2>Le BUT Science des Données - Bilan personnel</h2>
-    </section>
-    <section>
-
-        <p><span><strong>😎 La première année</strong></span></p>
-    
-        <p><span>Je suis arrivé en BUT Science des Données un peu par hasard. À l'époque, j'étais encore indécis sur mon orientation, mais je savais que 
-            j’aimais les mathématiques et que l’univers de l’informatique m’attirait. En visitant le campus de Niort de l’IUT de Poitiers, j’ai découvert 
-            cette formation qui a immédiatement suscité mon intérêt : elle combinait exactement ce que je recherchais, entre rigueur mathématique et informatique.</span></p>
-    
-        <p><span>Ce fut une vraie révélation. Quand j’ai intégré le BUT, je ne savais même pas me servir d’Excel et je n'avais encore jamais touché à la 
-            programmation. J’ai rapidement plongé dans des langages comme Python, R ou encore SAS, que j’ai appris à maîtriser petit à petit. </span></p>
-    
-        <p><span>Depuis, je me suis beaucoup investi. J’ai notamment participé aux Journées Portes Ouvertes, où j’ai présenté notre formation aux futurs étudiants. 
-            J’ai également eu l’occasion de retourner dans mon ancien lycée pour partager mon expérience et parler de mon parcours. Ce sont des moments que j’ai appréciés, 
-            car ils m’ont permis de prendre du recul sur ma propre évolution.</span></p>
-
-    </section>
-    <section>
-
-        <p><span><strong>🤯 La deuxième année</strong></span></p>
-    
-        <p><span>En deuxième année, je me suis spécialisé en <strong>Visualisation et Conception d’Outils Décisionnels</strong>, une orientation qui correspond parfaitement 
-            à mon profil. Mon objectif est de rendre les données accessibles et compréhensibles, grâce à des outils clairs, pertinents et bien conçus. J'ai choisi ce parcours
-            car je préfère l'informatique aux mathématiques. 
-        </span></p>
-
-        <p><span>La deuxième année est la plus difficile du BUT SD. Le troisième semestre est marqué d'une période où les étudiants ont beaucoup de projets à rendre 
-            en même temps et beaucoup d'examens à passer. C'est un moment décisif dans cette formation. J'avais très peur de ne pas y arriver et de ne pas avoir le niveau. 
-            Les mathématiques sont la partie la partie la plus difficile du BUT, mais cela ne m'a pas découragé. Avec de la force et de la persévérence, on finit toujours 
-            par y arriver !
-            Au final, tout s'est bien passé, et j'ai réussi mon année.</span></p>
-
-        <p><span>Cette année a été marquée par de nombreux projets divers et variés. J'ai été community manager des réseaux de Science des Données, ce qui m'a permis de développer mes 
-            compétences en communication. J'ai aussi participé à un projet qui visait à organiser un Challenge Dataviz entre des lycéens et des collégiens, ce qui m'a appris à rendre 
-            la data science ludique et accessible aux jeunes. J'ai également eu l'occasion de travailler sur des projet d'inoformatique décisionnelle, comme la création de tableau de bord 
-            web dynamiques. 
-            </span></p>
-        
-        <p><span>La deuxième année est aussi marquée par un stage à réaliser en entreprise. J'ai effectué le mien à l'étranger, en Autriche. J'ai eu la chance de pouvoir le faire à la 
-            Johanne Kepler Universität à Linz, dans le département des statistiques. C'est une expérience qui m'a permis d'appliquer mes connaissances au service d'un projet universitaire 
-            en autonomie. Cela a été l'occasion pour moi de découvrir le machine learning et la bio-statistique, le tout en anglais, ce qui ajoute des cordes à mon arc par rapport à mon profil 
-            plutôt orienté vers l'informatique. Ce stage m'a vraiment donné envie de poursuivre mes études après le BUT, car j'ai pu rencontrer des étudiants en Master et en 
-            Doctorat, et j'ai été impressionné par leur niveau de compétence et leur passion pour la recherche.
-        
-        </span></p>
-
-        <p><span>Pour conclure sur cette deuxième année, je dirais que cela a été un défi à relever, mais aussi une période qui m'a permis de mieux définir mon projet professionel futur.
-            J'ai pris goût aux missions effectuées dans le cadre de mon stage, et cela renforce mon envie de poursuivre en Master après le BUT, pour devenir Data-Scientist.
-        </span></p>
-
-    </section>
-    <section>    
-
-        <p><span><strong>📈 Quel avenir pour moi ? Comment vais-je mener ma troisième année ?</strong></span></p>
-
-
-        <p><span>
-            J'ai décidé d'effectuer ma troisième année en alternance. Je vais travailler à <strong>Retour de Plage</strong>, une entreprise de bijoux artisanaux, en tant qu'assistant en Data-Science.
-            Cette entreprise, située à l'île d'Oléron, va me permettre de mettre en pratique mes compétences en Data-Science dans un contexte réel. Je vais très certainement travailler avec des outils
-            comme VBA et Python. J'espère que cette expérience me permettra de développer mes compétences en Data-Science et de me préparer au mieux pour mon futur métier de Data-Scientist.
-            J'aimerais aussi être ambassadeur de la formation Science des Données, pour continuer à promouvoir cette formation en faisant suite à mon expérience de community manager de deuxièmme année.
-        </span></p>
-    </section>
-    <section>
-        <p><span><strong>👓 Ma vision à long terme</strong></span></p>
-        <p><span>
-            Cette troisième année est aussi une étape vers un Master en Data Science ou Intelligence Artificielle. Mon objectif est clair : devenir Data Scientist dans un environnement dynamique et 
-            stimulant, où je pourrai allier rigueur scientifique, créativité et impact concret.
-        </span></p>
-
+      </div>
     </section>
 
-    <footer>
-        <p class="copyright">&copy; 2026 Rémi Pierron</p>
-    </footer>
+    <!-- Parcours scolaire -->
+    <section class="section reveal">
+      <div class="section-label">Avant le BUT</div>
+      <h2>🧑‍🎓 Mon parcours scolaire</h2>
+      <p>
+        J'ai obtenu le <strong>Baccalauréat Général</strong> en 2023 avec les spécialités Mathématiques et
+        Histoire Géographie Géopolitique Science Politique. En Première, j'avais en plus la spécialité
+        Physique-Chimie, car je voulais m'orienter en école d'ingénieur. Finalement, je me suis rendu compte
+        que je n'aimais pas cette matière, et j'ai décidé de garder les Mathématiques et l'HGGSP en Terminale.
+        L'HGGSP m'a permis d'améliorer ma culture générale ainsi que mes compétences rédactionnelles.
+      </p>
+    </section>
+
+    <!-- BUT 1 -->
+    <section class="section reveal">
+      <div class="section-label">2023 — 2024</div>
+      <h2>😎 La première année</h2>
+      <p>
+        Je suis arrivé en BUT Science des Données un peu par hasard. À l'époque, j'étais encore indécis sur
+        mon orientation, mais je savais que j'aimais les mathématiques et que l'univers de l'informatique
+        m'attirait. En visitant le campus de Niort de l'IUT de Poitiers, j'ai découvert cette formation qui
+        a immédiatement suscité mon intérêt : elle combinait exactement ce que je recherchais, entre rigueur
+        mathématique et informatique.
+      </p>
+      <p>
+        Ce fut une vraie révélation. Quand j'ai intégré le BUT, je ne savais même pas me servir d'Excel et
+        je n'avais encore jamais touché à la programmation. J'ai rapidement plongé dans des langages comme
+        Python, R ou encore SAS.
+      </p>
+      <p>
+        Depuis, je me suis beaucoup investi. J'ai notamment participé aux Journées Portes Ouvertes, où j'ai
+        présenté notre formation aux futurs étudiants. J'ai également eu l'occasion de retourner dans mon
+        ancien lycée pour partager mon expérience et parler de mon parcours.
+      </p>
+    </section>
+
+    <!-- BUT 2 -->
+    <section class="section reveal">
+      <div class="section-label">2024 — 2025</div>
+      <h2>🤯 La deuxième année</h2>
+      <p>
+        En deuxième année, je me suis spécialisé en <strong>Visualisation et Conception d'Outils
+        Décisionnels (VCOD)</strong>, une orientation qui correspond parfaitement à mon profil. Mon objectif
+        est de rendre les données accessibles et compréhensibles grâce à des outils clairs et bien conçus.
+        J'ai choisi ce parcours car je préfère l'informatique aux mathématiques.
+      </p>
+      <p>
+        La deuxième année est la plus difficile du BUT SD. Le troisième semestre est marqué par une période
+        où les étudiants ont beaucoup de projets et d'examens en simultané. Avec de la force et de la
+        persévérance, on finit toujours par y arriver — et j'ai réussi mon année.
+      </p>
+      <p>
+        Cette année a été marquée par de nombreux projets divers. J'ai été <strong>community manager</strong>
+        des réseaux de Science des Données, participé à un Challenge Dataviz entre lycéens et collégiens,
+        et travaillé sur des tableaux de bord web dynamiques.
+      </p>
+      <p>
+        La deuxième année est aussi marquée par un stage. J'ai effectué le mien à l'étranger, en Autriche,
+        à la <strong>Johannes Kepler Universität à Linz</strong>, dans le département des statistiques.
+        C'est une expérience qui m'a permis d'appliquer mes connaissances sur un projet universitaire en
+        autonomie, de découvrir le machine learning et la bio-statistique — le tout en anglais. Ce stage
+        m'a vraiment donné envie de poursuivre mes études après le BUT.
+      </p>
+    </section>
+
+    <!-- BUT 3 -->
+    <section class="section reveal">
+      <div class="section-label">2025 — 2026</div>
+      <h2>📈 La troisième année — Alternance</h2>
+      <p>
+        J'ai décidé d'effectuer ma troisième année en alternance. Je travaille à <strong>Retour de Plage</strong>,
+        une entreprise de bijoux artisanaux de l'île d'Oléron, en tant qu'assistant en Data Science.
+        J'y utilise principalement VBA et Python pour mettre en pratique mes compétences dans un contexte réel.
+        J'ai également poursuivi mon rôle d'ambassadeur de la formation Science des Données.
+        Cette année est la plus enrichissante de mon parcours, car elle me permet d'appliquer concrètement ce que j'ai appris 
+        et de développer des compétences professionnelles tout en continuant à apprendre. C'est une expérience très 
+        formatrice qui me prépare idéalement pour la suite de mon parcours. 
+      </p>
+    </section>
+
+    <!-- Vision long terme -->
+    <section class="section reveal">
+      <div class="section-label">Ambitions</div>
+      <h2>👓 Et après le BUT ?</h2>
+      <p>
+        L'année prochaine, je prévois de poursuivre mes études en école d'ingénieur, 
+        idéalement dans une formation spécialisée en Data Science ou en Intelligence Artificielle. 
+        Je vais intégrer le CNAM en ingénieur SDIA en poursuivant mon alternance chez Retour de Plage.
+        Mon objectif à long terme est de devenir un expert en Data Science, capable de concevoir des solutions
+        innovantes pour aider les entreprises à tirer le meilleur parti de leurs données. 
+        Mon métier de rêve serait d'être Data Scientist.
+      </p>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Rémi Pierron</span>
+      <p>&copy; 2026 — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="script/main.js"></script>
 </body>
 </html>

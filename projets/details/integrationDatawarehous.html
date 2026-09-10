@@ -1,113 +1,121 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAE / Intégration de Données dans un Datawarehouse</title>
-    <link rel="stylesheet" href="../../styles.css"> <!-- Chemin relatif pour accéder au fichier CSS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Styles CSS spécifiques à cette page */
-        img {
-            display: block; /* Pour centrer horizontalement */
-            margin: 50px auto; /* Ajoute une marge en haut et en bas, et centre verticalement */
-            max-width: 100%; /* Largeur maximale de l'image */
-            max-height: 400px; /* Hauteur maximale de l'image */
-            border-radius: 10px; /* Coins arrondis */
-        }
-
-        h2 {
-            margin-top: 20px; /* Ajoute une marge en haut du titre */
-            margin-bottom: 10px; /* Ajoute une marge en bas du titre */
-        }
-
-        p {
-            margin-bottom: 20px; /* Ajoute une marge en bas du texte */
-        }
-        span {
-            font-family: Arial, sans-serif; /* Applique la police Arial aux balises span */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAE / Intégration de Données dans un Datawarehouse — Rémi Pierron</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>if (localStorage.getItem("theme") === "dark") { document.documentElement.setAttribute("data-theme", "dark"); }</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="title">
-                SAE / Intégration de Données dans un Datawarehouse
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="../../index.html">Accueil</a></li>
-                    <li><a href="../../projects.html">Projets</a></li>
-                    <li><a href="../../about.html">À propos de moi</a></li>
-                    <li><a href="../../debrief.html">Mes études</a></li>
-                    <li><a href="../../contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <section>
-        <div class="pills-container">
-            <div class="pills">
-                <span class="pill">PYTHON</span>
-                <span class="pill">DOCKER DESKTOP</span>
-                <span class="pill">POWER BI</span>
-                
-                <!-- Ajoutez d'autres logiciels utilisés si nécessaire -->
-            </div>
-            <div class="project-note">Projet mené en groupe de 4 - décembre 2024</div>
-        </div>
-    </section>
-    
 
-    <section>
-        <h2>Nettoyer, trier et intégrer un grand volume de données dans un entrepôt de données</h2>
-        <img loading="lazy" decoding="async" src="../../image/stock-16.jpeg" alt="Description de votre image">
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../../index.html" class="navbar-brand"><span class="brand-dot"></span>Rémi Pierron</a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="navbar-nav">
+        <li><a href="../../index.html">Accueil</a></li>
+        <li><a href="../../projects.html">Projets</a></li>
+        <li><a href="../../about.html">À propos</a></li>
+        <li><a href="../../debrief.html">Mes études</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <a href="../../projects.html" class="back-link">Retour aux projets</a>
+
+    <!-- Header projet -->
+    <div class="project-detail-header fade-in">
+      <div class="section-label">Projet mené en groupe de 4 - décembre 2024</div>
+      <h1>SAE / Intégration de Données dans un Datawarehouse</h1>
+      <div class="pills" style="margin-top: 16px;">
+        <span class="pill">PYTHON</span>
+        <span class="pill">DOCKER DESKTOP</span>
+        <span class="pill">POWER BI</span>
+      </div>
+      <div class="project-meta">
+        <span class="project-meta-item">👥 Projet mené en groupe de 4</span>
+        <span class="project-meta-item">📅 décembre 2024</span>
+        <span class="project-meta-item">🏛️ IUT de Poitiers — Niort</span>
+      </div>
+    </div>
+
+    <!-- Image principale -->
+    <section class="project-section reveal">
+      <img src="../../image/stock-16.jpeg" alt="Description de votre image" class="content-img">
     </section>
-    <section>
-        <h2>Quel était l'objectif de notre travail ?</h2>
-        <p><span>L'objectif de ce projet était de créer un entrepôt de données à partir d'un ensemble de données volumineux et hétérogène. 
+
+    <section class="project-section reveal">
+      <h2>Nettoyer, trier et intégrer un grand volume de données dans un entrepôt de données</h2>
+      
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Quel était l'objectif de notre travail ?</h2>
+      <p>
+        L'objectif de ce projet était de créer un entrepôt de données à partir d'un ensemble de données volumineux et hétérogène. 
             Nous avons utilisé Python pour le nettoyage et la transformation des données, puis nous avons intégré ces données dans un entrepôt de données 
             en utilisant Docker Desktop. Enfin, nous avons créé des visualisations interactives avec Power BI pour analyser les données.
-        </span></p>
+      </p>
     </section>
-    <section>
-        <h2>Comment avons-nous procédé ?</h2>
-        <p><span>Nous avons commencé par explorer les données brutes pour comprendre leur structure et identifier les problèmes de qualité. 
+
+    <section class="project-section reveal">
+      <h2>Comment avons-nous procédé ?</h2>
+      <p>
+        Nous avons commencé par explorer les données brutes pour comprendre leur structure et identifier les problèmes de qualité. 
             Ensuite, nous avons utilisé Python pour nettoyer et transformer les données, en supprimant les doublons, en corrigeant les erreurs et en normalisant les formats. 
             Une fois les données prêtes, nous avons utilisé Docker Desktop pour créer un environnement d'entrepôt de données et y intégrer nos données nettoyées. 
             Enfin, nous avons utilisé Power BI pour créer des tableaux de bord interactifs permettant d'analyser les données de manière visuelle.
-        </span></p>
+      </p>
     </section>
-    <section>
-        <h2>Quelles difficultés avons-nous rencontrées ?</h2>
-        <p><span>Nous avons rencontré plusieurs défis au cours de ce projet. L'un des principaux défis était de gérer la taille et la complexité des données, 
+
+    <section class="project-section reveal">
+      <h2>Quelles difficultés avons-nous rencontrées ?</h2>
+      <p>
+        Nous avons rencontré plusieurs défis au cours de ce projet. L'un des principaux défis était de gérer la taille et la complexité des données, 
             ce qui a nécessité une attention particulière lors du nettoyage et de la transformation. De plus, l'intégration des données dans Docker Desktop 
             a présenté des défis techniques, notamment en ce qui concerne la configuration de l'environnement. Enfin, la création de visualisations interactives 
             avec Power BI a nécessité un apprentissage approfondi de l'outil pour tirer le meilleur parti de ses fonctionnalités.
-        </span></p>
-    </section>
-    <section>
-        <h2>Quelle note avons-nous obtenue ?</h2>
-        <p><span>Notre travail nous a valu la note de 17,5/20.</span></p>
-    </section>
-    <section>
-        <h2>Quelles sont mes compétences acquises ?</h2>
-        <p><span>
-            Grâce à ce projet, j'ai acquis des compétences solides en nettoyage et transformation de données avec Python, ainsi qu'une compréhension approfondie 
-            de la création d'entrepôts de données avec Docker Desktop. J'ai également développé mes compétences en visualisation de données avec Power BI, 
-            ce qui m'a permis de créer des tableaux de bord interactifs et informatifs. Enfin, j'ai renforcé mes compétences en travail d'équipe et en gestion de projet.
-        </span></p>
-    </section>
-    <section>
-        
-        <a href="../../projects.html" class="back-button">Retour aux projets</a>
+      </p>
     </section>
 
-    <footer>
-        <p class="copyright">&copy; 2026 Rémi Pierron</p>
-    </footer>
+    <section class="project-section reveal">
+      <h2>Quelle note avons-nous obtenue ?</h2>
+      <p>Notre travail nous a valu la note de :</p>
+      <div class="grade-badge">⭐ 17,5 / 20</div>
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Quelles sont mes compétences acquises ?</h2>
+      <p>
+        Grâce à ce projet, j'ai acquis des compétences solides en nettoyage et transformation de données avec Python, ainsi qu'une compréhension approfondie 
+            de la création d'entrepôts de données avec Docker Desktop. J'ai également développé mes compétences en visualisation de données avec Power BI, 
+            ce qui m'a permis de créer des tableaux de bord interactifs et informatifs. Enfin, j'ai renforcé mes compétences en travail d'équipe et en gestion de projet.
+      </p>
+    </section>
+
+    <section class="project-section reveal">
+      <div class="project-links">
+        <a href="../../projects.html" class="btn btn-secondary">← Retour aux projets</a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Rémi Pierron</span>
+      <p>&copy; 2026 — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="../../script/main.js"></script>
 </body>
 </html>

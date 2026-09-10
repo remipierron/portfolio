@@ -1,107 +1,114 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet / Mini projet SQL</title>
-    <link rel="stylesheet" href="../../styles.css"> <!-- Chemin relatif pour accéder au fichier CSS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Styles CSS spécifiques à cette page */
-        img {
-            display: block; /* Pour centrer horizontalement */
-            margin: 50px auto; /* Ajoute une marge en haut et en bas, et centre verticalement */
-            max-width: 100%; /* Largeur maximale de l'image */
-            max-height: 400px; /* Hauteur maximale de l'image */
-            border-radius: 10px; /* Coins arrondis */
-        }
-
-        h2 {
-            margin-top: 20px; /* Ajoute une marge en haut du titre */
-            margin-bottom: 10px; /* Ajoute une marge en bas du titre */
-        }
-
-        p {
-            margin-bottom: 20px; /* Ajoute une marge en bas du texte */
-        }
-        span {
-            font-family: Arial, sans-serif; /* Applique la police Arial aux balises span */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet / Mini projet SQL — Rémi Pierron</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>if (localStorage.getItem("theme") === "dark") { document.documentElement.setAttribute("data-theme", "dark"); }</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="title">
-                Projet / Mini projet SQL
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="../../index.html">Accueil</a></li>
-                    <li><a href="../../projects.html">Projets</a></li>
-                    <li><a href="../../about.html">À propos de moi</a></li>
-                    <li><a href="../../debrief.html">Mes études</a></li>
-                    <li><a href="../../contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <section>
-        <div class="pills-container">
-            <div class="pills">
-                <span class="pill">SQL</span>
-                <span class="pill">Oracle</span>
-                <span class="pill">Looping</span>
-                
-                <!-- Ajoutez d'autres logiciels utilisés si nécessaire -->
-            </div>
-            <div class="project-note">Projet en groupe de 2 - Novembre 2024</div>
-        </div>
-    </section>
-    
 
-    <section>
-        <h2>Construire, alimenter et exploiter une base SQL Oracle</h2>
-        <img loading="lazy" decoding="async" src="../../image/stock-25.jpeg" alt="Description de votre image">
-    </section>
-    <section>
-        <h2>Quel était l'objectif de notre travail ?</h2>
-        <p><span>Nous avons été chargé de concevoir une base de données pour une société fictive, en utilisant SQL et Oracle. Nous devions créer les tables, 
-            les relations entre elles, ainsi que les requêtes nécessaires pour exploiter les données. Nous avons conçu le MLD et le MCD avec Looping.</span></p>
-        
-    </section>
-    <section>
-        <h2>Comment avons-nous procédé ?</h2>
-        <p><span>
-            Nous avons commencé par analyser les besoins de la société fictive, puis nous avons conçu le MCD et le MLD. Ensuite, nous avons créé les tables dans Oracle et 
-            alimenté la base de données avec des données fictives. Enfin, nous avons écrit des requêtes SQL pour extraire et manipuler les données.</span></p>
-        
-    </section>
-    <section>
-        <h2>Quelles difficultés ai-je rencontrées ?</h2>
-        <p><span>
-            Nous avons rencontré des difficultés lors de la création des relations entre les tables, car il était important de bien comprendre les cardinalités.
-        </span></p>
-    </section>
-    <section>
-        <h2>Quelle note ai-je obtenue ?</h2>
-        <p><span>Nous avons obtenu la note de 16.8/20</span></p>
-    </section>
-    <section>
-        <h2>Quelles sont mes compétences acquises ?</h2>
-        <p><span>
-            J'ai acquis des compétences en conception de bases de données, en SQL et en utilisation d'Oracle. 
-        </span></p>
-    </section>
-    <section>
-        <a href="../../telechargements/sql.zip" download>Cliquez ici pour télécharger ce projet !</a>
-        <a href="../../projects.html" class="back-button">Retour aux projets</a>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../../index.html" class="navbar-brand"><span class="brand-dot"></span>Rémi Pierron</a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="navbar-nav">
+        <li><a href="../../index.html">Accueil</a></li>
+        <li><a href="../../projects.html">Projets</a></li>
+        <li><a href="../../about.html">À propos</a></li>
+        <li><a href="../../debrief.html">Mes études</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <a href="../../projects.html" class="back-link">Retour aux projets</a>
+
+    <!-- Header projet -->
+    <div class="project-detail-header fade-in">
+      <div class="section-label">Projet en groupe de 2 - Novembre 2024</div>
+      <h1>Projet / Mini projet SQL</h1>
+      <div class="pills" style="margin-top: 16px;">
+        <span class="pill">SQL</span>
+        <span class="pill">Oracle</span>
+        <span class="pill">Looping</span>
+      </div>
+      <div class="project-meta">
+        <span class="project-meta-item">👥 Projet en groupe de 2</span>
+        <span class="project-meta-item">📅 Novembre 2024</span>
+        <span class="project-meta-item">🏛️ IUT de Poitiers — Niort</span>
+      </div>
+    </div>
+
+    <!-- Image principale -->
+    <section class="project-section reveal">
+      <img src="../../image/stock-25.jpeg" alt="Description de votre image" class="content-img">
     </section>
 
-    <footer>
-        <p class="copyright">&copy; 2026 Rémi Pierron</p>
-    </footer>
+    <section class="project-section reveal">
+      <h2>Construire, alimenter et exploiter une base SQL Oracle</h2>
+      
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Quel était l'objectif de notre travail ?</h2>
+      <p>
+        Nous avons été chargé de concevoir une base de données pour une société fictive, en utilisant SQL et Oracle. Nous devions créer les tables, 
+            les relations entre elles, ainsi que les requêtes nécessaires pour exploiter les données. Nous avons conçu le MLD et le MCD avec Looping.
+      </p>
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Comment avons-nous procédé ?</h2>
+      <p>
+        Nous avons commencé par analyser les besoins de la société fictive, puis nous avons conçu le MCD et le MLD. Ensuite, nous avons créé les tables dans Oracle et 
+            alimenté la base de données avec des données fictives. Enfin, nous avons écrit des requêtes SQL pour extraire et manipuler les données.
+      </p>
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Quelles difficultés ai-je rencontrées ?</h2>
+      <p>
+        Nous avons rencontré des difficultés lors de la création des relations entre les tables, car il était important de bien comprendre les cardinalités.
+      </p>
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Quelle note ai-je obtenue ?</h2>
+      <p>Notre travail nous a valu la note de :</p>
+      <div class="grade-badge">⭐ 16,8 / 20</div>
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Quelles sont mes compétences acquises ?</h2>
+      <p>
+        J'ai acquis des compétences en conception de bases de données, en SQL et en utilisation d'Oracle.
+      </p>
+    </section>
+
+    <section class="project-section reveal">
+      <div class="project-links">
+        <a href="../../telechargements/sql.zip" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Télécharger ce projet →</a>
+        <a href="../../projects.html" class="btn btn-secondary">← Retour aux projets</a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Rémi Pierron</span>
+      <p>&copy; 2026 — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="../../script/main.js"></script>
 </body>
 </html>

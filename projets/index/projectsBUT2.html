@@ -1,183 +1,170 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Projets</title>
-    <link rel="stylesheet" href="../../styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Styles pour les sections */
-        .projects-section {
-            margin: 40px 0;
-        }
-
-        .projects-section h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #000000;
-        }
-
-        /* Styles pour les cartes de projets */
-        .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .project-card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            text-align: center;
-            width: 300px;
-        }
-
-        .project-card h3 {
-            margin: 10px 0;
-            font-size: 18px;
-            color: #333;
-        }
-
-        .project-card a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: #000000;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .project-card a:hover {
-            background-color: #000000;
-            color: #fff;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets BUT2 SD VCOD — Rémi Pierron</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>if (localStorage.getItem("theme") === "dark") { document.documentElement.setAttribute("data-theme", "dark"); }</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="title">
-                Mes Projets de BUT2 SD VCOD
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="../../index.html">Accueil</a></li>
-                    <li><a href="../../projects.html">Projets</a></li>
-                    <li><a href="../../about.html">À propos de moi</a></li>
-                    <li><a href="../../debrief.html">Mes études</a></li>
-                    <li><a href="../../contact.html">Contact</a></li>
-                </ul>
-            </nav>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../../index.html" class="navbar-brand"><span class="brand-dot"></span>Rémi Pierron</a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="navbar-nav">
+        <li><a href="../../index.html">Accueil</a></li>
+        <li><a href="../../projects.html">Projets</a></li>
+        <li><a href="../../about.html">À propos</a></li>
+        <li><a href="../../debrief.html">Mes études</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <div class="page-banner fade-in">
+      <div class="section-label">BUT2 — 2023/2024</div>
+      <h1>Projets de BUT2 SD VCOD</h1>
+      <p>Projets de deuxième année : datawarehouse, développement web, statistiques avancées.</p>
+    </div>
+    <a href="../../projects.html" class="back-link">Retour aux projets</a>
+
+    <section class="section reveal">
+      <div class="section-heading">
+        <h2>🖥️ Projets d'informatique</h2>
+        <div class="section-heading-line"></div>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img class="project-card-img" src="../../image/stock-29.jpeg" alt="Rshiny" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Reporting d'une analyse multivariée</div>
+            <a href="../details/rshiny.html" class="project-card-link">Voir le projet</a>
+          </div>
         </div>
-    </header>
-
-
-    
-
-    <!-- Section des projets informatiques -->
-    <section id="projects-informatique" class="projects-section">
-        <h2>🖥️ Projets universitaires d'informatique</h2>
-        <div class="projects-container">
-            
-            
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="../../image/stock-29.jpeg" alt="Rshiny">
-                <h3>Reporting d'une analyse multivariée</h3>
-                <a href="../details/rshiny.html">Voir le projet</a>
-            </div>
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="../../image/stock-28.jpeg" alt="Datawarehouse">
-                <h3>Site web en Javascript</h3>
-                <a href="../details/javascriptAirBNB.html">Voir le projet</a>
-            </div>
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="../../image/stock-26.jpeg" alt="Datawarehouse">
-                <h3>Développement d’un composant d’une solution décisionnelle</h3>
-                <a href="../details/composantSolution.html">Voir le projet</a>
-            </div>
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="../../image/stock-32.jpeg" alt="qgis">
-                <h3>Système d'Information Géographique</h3>
-                <a href="../details/qgis.html">Voir le projet</a>
-            </div>
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="../../image/stock-27.jpeg" alt="Datawarehouse">
-                <h3>Application VBA</h3>
-                <a href="../details/excelVV.html">Voir le projet</a>
-            </div>
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="../../image/stock-16.jpeg" alt="Datawarehouse">
-                <h3>Intégration de Données dans un Datawarehouse</h3>
-                <a href="../details/integrationDatawarehous.html">Voir le projet</a>
-            </div>
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="../../image/stock-25.jpeg" alt="Datawarehouse">
-                <h3>Mini Projet SQL</h3>
-                <a href="../details/miniProjetSQL.html">Voir le projet</a>
-            </div>
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="../../image/stock-20.jpeg" alt="Datawarehouse">
-                <h3>Collecte de données web</h3>
-                <a href="../details/collectedonneesweb.html">Voir le projet</a>
-            </div>
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="../../image/stock-15.jpeg" alt="Projet Web PHP">
-                <h3>Projet Web PHP</h3>
-                <a href="../details/ecovision.html">Voir le projet</a>
-            </div>
-            
+        <div class="project-card">
+          <img class="project-card-img" src="../../image/stock-28.jpeg" alt="JavaScript AirBNB" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Site web en Javascript</div>
+            <a href="../details/javascriptAirBNB.html" class="project-card-link">Voir le projet</a>
+          </div>
         </div>
+        <div class="project-card">
+          <img class="project-card-img" src="../../image/stock-26.jpeg" alt="Composant décisionnel" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Développement d'un composant d'une solution décisionnelle</div>
+            <a href="../details/composantSolution.html" class="project-card-link">Voir le projet</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img class="project-card-img" src="../../image/stock-32.jpeg" alt="QGIS" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Système d'Information Géographique</div>
+            <a href="../details/qgis.html" class="project-card-link">Voir le projet</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img class="project-card-img" src="../../image/stock-27.jpeg" alt="Application VBA" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Application VBA</div>
+            <a href="../details/excelVV.html" class="project-card-link">Voir le projet</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img class="project-card-img" src="../../image/stock-16.jpeg" alt="Datawarehouse" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Intégration de Données dans un Datawarehouse</div>
+            <a href="../details/integrationDatawarehous.html" class="project-card-link">Voir le projet</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img class="project-card-img" src="../../image/stock-25.jpeg" alt="Mini Projet SQL" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Mini Projet SQL</div>
+            <a href="../details/miniProjetSQL.html" class="project-card-link">Voir le projet</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img class="project-card-img" src="../../image/stock-20.jpeg" alt="Collecte web" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Collecte de données web</div>
+            <a href="../details/collectedonneesweb.html" class="project-card-link">Voir le projet</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img class="project-card-img" src="../../image/stock-15.jpeg" alt="Projet Web PHP" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Projet Web PHP</div>
+            <a href="../details/ecovision.html" class="project-card-link">Voir le projet</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Section des projets statistiques -->
-    <section id="projects-statistiques" class="projects-section">
-        <h2>📈 Projets universitaires de statistiques</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="../../image/stock-18.jpeg" alt="Séries Chronologiques">
-                <h3>Séries Chronologiques</h3>
-                <a href="../details/seriechrono.html">Voir le projet</a>
-            </div>
-            
+    <section class="section reveal">
+      <div class="section-heading">
+        <h2>📈 Projets de statistiques</h2>
+        <div class="section-heading-line"></div>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img class="project-card-img" src="../../image/stock-18.jpeg" alt="Séries Chronologiques" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Séries Chronologiques</div>
+            <a href="../details/seriechrono.html" class="project-card-link">Voir le projet</a>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Section des projets statistiques -->
-    <section id="projects-statistiques" class="projects-section">
-        <h2>📝 Autres projets universitaires</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="../../image/stock-22.jpeg" alt="Challenge Dataviz">
-                <h3>Community Manager</h3>
-                <a href="../details/communityManager.html">Voir le projet</a>
-            </div>
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="../../image/stock-23.jpeg" alt="Présentation d'un territoire économique et culturel">
-                <h3>Répondre aux besoins du territoire : donner des cours d'Excel au collège</h3>
-                <a href="../details/coursDataviz.html">Voir le projet</a>
-            </div>
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="../../image/stock-19.jpeg" alt="Présentation d'un territoire économique et culturel">
-                <h3>Droit : RGPD</h3>
-                <a href="../details/droit.html">Voir le projet</a>
-            </div>
-            
-            
+    <section class="section reveal">
+      <div class="section-heading">
+        <h2>📝 Autres projets</h2>
+        <div class="section-heading-line"></div>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img class="project-card-img" src="../../image/stock-22.jpeg" alt="Community Manager" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Community Manager</div>
+            <a href="../details/communityManager.html" class="project-card-link">Voir le projet</a>
+          </div>
         </div>
+        <div class="project-card">
+          <img class="project-card-img" src="../../image/stock-23.jpeg" alt="Cours Excel" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Répondre aux besoins du territoire : donner des cours d'Excel au collège</div>
+            <a href="../details/coursDataviz.html" class="project-card-link">Voir le projet</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img class="project-card-img" src="../../image/stock-19.jpeg" alt="Droit RGPD" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Droit : RGPD</div>
+            <a href="../details/droit.html" class="project-card-link">Voir le projet</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
-        
-        <a href="../../projects.html" class="back-button">Retour</a>
-    </section>
+    <a href="../../projects.html" class="back-link" style="display:inline-flex; margin-bottom: 24px;">Retour aux projets</a>
 
-    <footer>
-        <p class="copyright">&copy; 2026 Rémi Pierron</p>
-    </footer>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Rémi Pierron</span>
+      <p>&copy; 2026 — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="../../script/main.js"></script>
 </body>
 </html>

@@ -1,124 +1,127 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À propos de moi</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Styles CSS pour l'image */
-        img {
-            display: block; /* Pour centrer horizontalement */
-            margin: 50px auto; /* Ajoute une marge en haut et en bas, et centre verticalement */
-            max-width: 100%; /* Largeur maximale de l'image */
-            max-height: 400px; /* Hauteur maximale de l'image */
-            border-radius: 10px; /* Coins arrondis */
-        }
-
-        /* Style CSS pour le titre */
-        h2 {
-            margin-top: 20px; /* Ajoute une marge en haut du titre */
-            margin-bottom: 10px; /* Ajoute une marge en bas du titre */
-        }
-
-        /* Style CSS pour le texte */
-        p {
-            margin-bottom: 20px; /* Ajoute une marge en bas du texte */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos — Rémi Pierron</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>if (localStorage.getItem("theme") === "dark") { document.documentElement.setAttribute("data-theme", "dark"); }</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="title">
-                À propos de moi
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="projects.html">Projets</a></li>
-                    <li><a href="about.html">À propos de moi</a></li>
-                    <li><a href="debrief.html">Mes études</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand"><span class="brand-dot"></span>Rémi Pierron</a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="navbar-nav">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="debrief.html">Mes études</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <div class="page-banner fade-in">
+      <div class="section-label">Qui suis-je ?</div>
+      <h1>À propos de moi</h1>
+      <p>Quelques éléments qui permettent de cerner ma personnalité, mes passions et mon expérience.</p>
+    </div>
+
+    <!-- Photo + intro -->
+    <section class="section reveal">
+      <img src="image/at-work2.jpeg" alt="Rémi au travail" class="content-img">
+    </section>
+
+    <!-- Taekwondo -->
+    <section class="section reveal">
+      <div class="section-label">Sport</div>
+      <h2>🥋 Taekwondo</h2>
+      <p>
+        Je pratique le Taekwondo depuis l'âge de 6 ans, au club Sojjok Kwan à Niort. Il s'agit d'un art martial
+        sud-coréen dont la création remonte aux années 1950. Cet art martial m'a appris à avoir confiance en moi.
+        En juin 2022, j'ai passé un examen pour obtenir le grade de <strong>1er Dan</strong>, le premier grade de la
+        ceinture noire. J'ai ensuite obtenu le <strong>2ème Dan</strong> en avril 2024, en parallèle de mes études.
+        Par ailleurs, j'ai participé à une démonstration olympique le 2 juin 2024, à l'occasion du passage de la flamme olympique.
+      </p>
+    </section>
+
+    <!-- Personnalité -->
+    <section class="section reveal">
+      <div class="section-label">Psychologie</div>
+      <h2>🧙‍♂️ Ma personnalité</h2>
+      <p>
+        Dans le cadre des cours de PPP (Projet Personnel et Professionnel), j'ai créé un dossier regroupant
+        les résultats de tests de personnalité afin de mieux me connaître. Voici un résumé :
+      </p>
+      <div class="personality-grid">
+        <div class="personality-card">
+          <div class="pcard-label">MBTI — 16 Personnalités</div>
+          <h3>INTJ — L'Architecte</h3>
+          <p>
+            Forte autonomie, esprit stratégique et quête constante de compréhension. Je préfère souvent travailler
+            seul, avec une intelligence analytique et une grande curiosité intellectuelle.
+          </p>
         </div>
-    </header>
-
-    <section id="about-me">
-        <h2>Voici quelques éléments qui permettent de cerner ma personalité</h2>
-        <img loading="lazy" decoding="async" src="image/at-work2.jpeg" alt="Description de votre image">
-        <h2>🥋 Taekwondo</h2>
-        <p><span>Je pratique le Taekwondo depuis l'âge de 6 ans, au club Sojjok Kwan à Niort. Il s'agit d'un art martial sud-coréen dont la création remonte 
-            aux années 1950. Cet art-martial m'a appris à avoir confiance en moi. En juin 2022, j'ai passé un examen pour obtenir le grade de 1er Dan, 
-            le premier grade de la ceinture noire.
-            J'ai ensuite passé le grade de 2ème Dan en avril 2024, en parallèle de mes études. 
-            Par ailleurs, j'ai aussi participé à une démonstration olympique le 2 juin 2024, à l'occasion du passage de la flamme olympique.</span>
-        </p>
-    </section>
-    <section id="about-me">
-        
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/FuHa0KTnmDA?si=jwcbHQrfOwQcbwBe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div><h2>🎵 Musique</h2>
-        <p><span>Depuis tout petit j'aime la musique. J'ai pris des cours de guitare pendant des années avant d'arrêter pour avoir plus de temps pour les études. Cependant, 
-            j'ai toujours le temps d'écouter de la musique. J'aime beaucoup le groupe Men I Trust, un groupe canadien de musique indie. Voici un de leurs morceaux !
-        </span>
-        </p>
-    </section>
-    <section id="about-me">
-
-        <h2>🧙‍♂️ Ma personalité</h2>
-        <p><span>
-            Dans le cadre des cours de PPP (Projet Personnel et Professionnel), j'ai du créer un dossier regroupant les résultats de tests de personnalité, afin de mieux me connaître moi-même.
-            Voici un résumé de ce dossier :
-
-        </span></p>
-        <p><span>
-            Les 16 personnalités (MBTI) : Je me reconnais dans le profil INTJ, dit “architecte”, une personnalité marquée par une forte autonomie, un esprit stratégique et une quête 
-            constante de compréhension et d’amélioration. J’ai tendance à réfléchir en profondeur, je préfère souvent travailler seul, et je me distingue par une intelligence 
-            analytique et une grande curiosité intellectuelle. Je suis conscient de l’importance de développer aussi mon intelligence émotionnelle.
-            
-        </span></p>
-        <p><span>
-            Test ISALEM97 : Ce test montre que mon style d’apprentissage est intuitif, mêlant réflexion et expérimentation. Je navigue entre une approche réflexive et pragmatique : 
-            je suis capable d’analyser les situations sous plusieurs angles et d’agir spontanément, même si cela peut parfois me rendre hésitant ou dispersé.
-            
-        </span></p>
-        <p><span>
-            Big Five (OCEAN) : Ce test révèle une grande ouverture d’esprit, une créativité marquée et une forte empathie, mais aussi une introversion importante, une organisation inégale, 
-            et une sensibilité élevée au stress. J’apprécie les idées nouvelles, les arts, et je me montre bienveillant, tout en ayant besoin de solitude pour me ressourcer.
-            
-        </span></p>
-        <p><span>
-            En conclusion, ces trois tests dressent un portrait cohérent de moi : je suis une personne curieuse, indépendante, analytique et créative, dotée d’une vie intérieure riche 
-            et d’une forte sensibilité émotionnelle. Ces résultats m’aident à mieux cerner mes forces et mes défis personnels, et à avancer en connaissance de moi-même.
-            
-        </span></p>
-        <p><span>
-            <p><a href="telechargements/rp.pdf" download>📄 Télécharger le dossier</a></p>
-            
-        </span></p>
-        
-    </section>
-    <section id="about-me">
-            <img loading="lazy" decoding="async" src="image/at-work4.jpeg" alt="Description de votre image">
-        <h2>👤 Expérience professionnelle</h2>
-        <p><span>Futuroscope : durant l'été 2023, j'ai eu la chance de pouvoir travailler au Futuroscope en temps que conseiller en ventes.
-            J'avais deux postes différents. J'étais au plateau d'appels téléphoniques pour organiser les séjours des
-            visiteurs, ainsi qu'à l'agence à l'entrée du parc, où mon travail consistait à corriger les erreurs de réservations 
-            des visiteurs. J'ai re-travaillé au Futuroscope 
-            durant les vacances de noël 2023 et l'été 2024, période de l'ouverture de l'Aquascope. Ce travail saisonnier m'a permis
-            de voir l'envers du décor d'un grand parc d'attraction ainsi que de me procurer une aisance relationelle.</span></p>
+        <div class="personality-card">
+          <div class="pcard-label">ISALEM97 — Style d'apprentissage</div>
+          <h3>Intuitif &amp; Réflexif</h3>
+          <p>
+            Mon style mêle réflexion et expérimentation. Je navigue entre une approche réflexive et pragmatique,
+            capable d'analyser les situations sous plusieurs angles.
+          </p>
+        </div>
+        <div class="personality-card">
+          <div class="pcard-label">Big Five — OCEAN</div>
+          <h3>Ouverture &amp; Créativité</h3>
+          <p>
+            Grande ouverture d'esprit, créativité marquée et forte empathie. Introversion importante, besoin de
+            solitude pour me ressourcer et sensibilité élevée.
+          </p>
+        </div>
+      </div>
+      <p style="margin-top:20px;">
+        Ces trois tests dressent un portrait cohérent : curieux, indépendant, analytique et créatif, avec une vie
+        intérieure riche et une forte sensibilité émotionnelle.
+      </p>
+      <div style="margin-top: 16px;">
+        <a href="telechargements/rp.pdf" download class="btn btn-secondary">
+          📄 Télécharger le dossier complet
+        </a>
+      </div>
     </section>
 
-    
+    <!-- Expérience pro -->
+    <section class="section reveal">
+      <div class="section-label">Expérience</div>
+      <h2>👤 Expérience professionnelle</h2>
+      <img src="image/at-work4.jpeg" alt="Rémi au Futuroscope" class="content-img content-img-sm">
+      <p>
+        <strong>Futuroscope</strong> : Durant l'été 2023, j'ai eu la chance de travailler au Futuroscope en tant
+        que conseiller en ventes. J'occupais deux postes : le plateau d'appels téléphoniques pour organiser
+        les séjours des visiteurs, et l'agence à l'entrée du parc pour corriger les erreurs de réservations.
+        J'ai re-travaillé au Futuroscope durant les vacances de noël 2023 et l'été 2024, période de l'ouverture
+        de l'Aquascope. Cette expérience m'a permis de voir l'envers du décor d'un grand parc d'attraction et de
+        développer une aisance relationnelle.
+      </p>
+    </section>
 
-    <footer>
-        <p class="copyright">&copy; 2026 Rémi Pierron</p>
-    </footer>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Rémi Pierron</span>
+      <p>&copy; 2026 — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="script/main.js"></script>
 </body>
 </html>

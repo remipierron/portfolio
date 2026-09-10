@@ -1,139 +1,127 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Projets</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Styles pour les sections */
-        .projects-section {
-            margin: 40px 0;
-        }
-
-        .projects-section h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #000000;
-        }
-
-        /* Styles pour les cartes de projets */
-        .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .project-card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            text-align: center;
-            width: 300px;
-        }
-
-        .project-card h3 {
-            margin: 10px 0;
-            font-size: 18px;
-            color: #333;
-        }
-
-        .project-card a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: #000000;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .project-card a:hover {
-            background-color: #000000;
-            color: #fff;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Projets — Rémi Pierron</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>if (localStorage.getItem("theme") === "dark") { document.documentElement.setAttribute("data-theme", "dark"); }</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="title">
-                Mes Projets
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="projects.html">Projets</a></li>
-                    <li><a href="about.html">À propos de moi</a></li>
-                    <li><a href="debrief.html">Mes études</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand"><span class="brand-dot"></span>Rémi Pierron</a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="navbar-nav">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="debrief.html">Mes études</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <section id="stage-alternance" class="projects-section">
+  <div class="page-wrapper">
+
+    <div class="page-banner fade-in">
+      <div class="section-label">Portfolio</div>
+      <h1>Mes Projets</h1>
+      <p>Stages, projets universitaires et réalisations personnelles en Data Science, visualisation et développement.</p>
+    </div>
+
+    <!-- Stage et alternance -->
+    <section class="section reveal">
+      <div class="section-heading">
         <h2>🌍 Stage et alternance</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="image/rdp2.jpeg" alt="Projet Web PHP">
-                <h3>Alternance : 🐚 Retour de Plage 🌊</h3>
-                <a href="projets/index/retourDePlage.html">Voir le projet</a>
-            </div>
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="image/jku2.jpeg" alt="Datawarehouse">
-                <h3>Stage : 🇪🇺 Erasmus à la JKU de Linz 🇦🇹</h3>
-                <a href="projets/index/stageJKU.html">Voir le projet</a>
-            </div>
+        <div class="section-heading-line"></div>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img class="project-card-img" src="image/rdp2.jpeg" alt="Retour de Plage" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Alternance : 🐚 Retour de Plage 🌊</div>
+            <div class="pills"><span class="pill">Python</span><span class="pill">VBA</span><span class="pill">Data Science</span></div>
+            <a href="projets/index/retourDePlage.html" class="project-card-link">Voir le projet</a>
+          </div>
         </div>
+        <div class="project-card">
+          <img class="project-card-img" src="image/jku2.jpeg" alt="Stage JKU Linz" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Stage : 🇪🇺 Erasmus à la JKU de Linz 🇦🇹</div>
+            <div class="pills"><span class="pill">Machine Learning</span><span class="pill">Bio-stats</span></div>
+            <a href="projets/index/stageJKU.html" class="project-card-link">Voir le projet</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Section des projets informatiques -->
-    <section id="projects-informatique" class="projects-section">
-        <h2>🧑🏻‍🎓 Projets universitaires</h2>
-        <div class="projects-container">
-            
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="image/sd.jpeg" alt="Application d'annotations d'images avec Dash-Python">
-                <h3>Projets de BUT1 SD</h3>
-                <a href="projets/index/projectsBUT1.html">Voir les projets</a>
-            </div>
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="image/sd.jpeg" alt="Rshiny">
-                <h3>Projets de BUT2 SD VCOD</h3>
-                <a href="projets/index/projectsBUT2.html">Voir les projets</a>
-            </div>
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="image/sd.jpeg" alt="Datawarehouse">
-                <h3>Projets de BUT3 SD VCOD</h3>
-                <a href="projets/index/projectsBUT3.html">Voir les projets</a>
-            </div>
-            
+    <!-- Projets universitaires -->
+    <section class="section reveal">
+      <div class="section-heading">
+        <h2>🎓 Projets universitaires</h2>
+        <div class="section-heading-line"></div>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img class="project-card-img" src="image/sd.jpeg" alt="Projets BUT1" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Projets de BUT1 — Science des Données</div>
+            <div class="pills"><span class="pill-neutral pill">Python</span><span class="pill-neutral pill">R</span><span class="pill-neutral pill">SQL</span></div>
+            <a href="projets/index/projectsBUT1.html" class="project-card-link">Voir les projets</a>
+          </div>
         </div>
+        <div class="project-card">
+          <img class="project-card-img" src="image/sd.jpeg" alt="Projets BUT2" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Projets de BUT2 — VCOD</div>
+            <div class="pills"><span class="pill-neutral pill">Dataviz</span><span class="pill-neutral pill">R Shiny</span><span class="pill-neutral pill">Dash</span></div>
+            <a href="projets/index/projectsBUT2.html" class="project-card-link">Voir les projets</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img class="project-card-img" src="image/sd.jpeg" alt="Projets BUT3" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Projets de BUT3 — VCOD</div>
+            <div class="pills"><span class="pill">Deep Learning</span><span class="pill">PySpark</span><span class="pill">LLM</span></div>
+            <a href="projets/index/projectsBUT3.html" class="project-card-link">Voir les projets</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="projects-informatique" class="projects-section">
-        <h2>🧑🏻‍🎓 Projets personnels</h2>
-        <div class="projects-container">
-            
-            <div class="project-card">
-                <img loading="lazy" decoding="async" src="image/wpp.jpeg" alt="projets personnels">
-                <h3>Projets personnels</h3>
-                <a href="projets/index/personnalProjects.html">Voir les projets</a>
-            </div>
-            
+    <!-- Projets personnels -->
+    <section class="section reveal">
+      <div class="section-heading">
+        <h2>💡 Projets personnels</h2>
+        <div class="section-heading-line"></div>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img class="project-card-img" src="image/wpp.jpeg" alt="Projets personnels" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Projets personnels</div>
+            <div class="pills"><span class="pill-neutral pill">Divers</span></div>
+            <a href="projets/index/personnalProjects.html" class="project-card-link">Voir les projets</a>
+          </div>
         </div>
+      </div>
     </section>
 
-    
+  </div>
 
-    <footer>
-        <p class="copyright">&copy; 2026 Rémi Pierron</p>
-    </footer>
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Rémi Pierron</span>
+      <p>&copy; 2026 — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="script/main.js"></script>
 </body>
 </html>

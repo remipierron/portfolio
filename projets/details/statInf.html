@@ -1,86 +1,111 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAE / Échantillonage et estimation</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../styles.css"> <!-- Chemin relatif pour accéder au fichier CSS -->
-    <style>
-        /* Styles CSS spécifiques à cette page */
-        img {
-            display: block; /* Pour centrer horizontalement */
-            margin: 50px auto; /* Ajoute une marge en haut et en bas, et centre verticalement */
-            max-width: 100%; /* Largeur maximale de l'image */
-            max-height: 400px; /* Hauteur maximale de l'image */
-            border-radius: 10px; /* Coins arrondis */
-        }
-
-        h2 {
-            margin-top: 20px; /* Ajoute une marge en haut du titre */
-            margin-bottom: 10px; /* Ajoute une marge en bas du titre */
-        }
-
-        p {
-            margin-bottom: 20px; /* Ajoute une marge en bas du texte */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAE / Échantillonage et estimation — Rémi Pierron</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>if (localStorage.getItem("theme") === "dark") { document.documentElement.setAttribute("data-theme", "dark"); }</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="title">
-                SAE / Échantillonage et estimation
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="../../index.html">Accueil</a></li>
-                    <li><a href="../../projects.html">Projets</a></li>
-                    <li><a href="../../about.html">À propos de moi</a></li>
-                    <li><a href="../../debrief.html">Mes études</a></li>
-                    <li><a href="../../contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <section>
-        <div class="pills-container">
-            <div class="pills">
-                <span class="pill">R</span>
-                <span class="pill">Word</span>
-                
-                <!-- Ajoutez d'autres logiciels utilisés si nécessaire -->
-            </div>
-            <div class="project-note">Projet mené en binôme - mai 2024</div>
-        </div>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../../index.html" class="navbar-brand"><span class="brand-dot"></span>Rémi Pierron</a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="navbar-nav">
+        <li><a href="../../index.html">Accueil</a></li>
+        <li><a href="../../projects.html">Projets</a></li>
+        <li><a href="../../about.html">À propos</a></li>
+        <li><a href="../../debrief.html">Mes études</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <a href="../../projects.html" class="back-link">Retour aux projets</a>
+
+    <!-- Header projet -->
+    <div class="project-detail-header fade-in">
+      <div class="section-label">Projet mené en binôme - mai 2024</div>
+      <h1>SAE / Échantillonage et estimation</h1>
+      <div class="pills" style="margin-top: 16px;">
+        <span class="pill">R</span>
+        <span class="pill">Word</span>
+      </div>
+      <div class="project-meta">
+        <span class="project-meta-item">👥 Projet mené en binôme</span>
+        <span class="project-meta-item">📅 mai 2024</span>
+        <span class="project-meta-item">🏛️ IUT de Poitiers — Niort</span>
+      </div>
+    </div>
+
+    <!-- Image principale -->
+    <section class="project-section reveal">
+      <img src="../../image/stock-11.jpeg" alt="Description de votre image" class="content-img">
     </section>
 
-    <section>
-        <h2>Appliquer des méthodes d'estimations statistiques complexes.</h2>
-        <img loading="lazy" decoding="async" src="../../image/stock-11.jpeg" alt="Description de votre image">
-        <h2>Quel était l'objectif de notre travail ?</h2>
-        <p><span>L’objectif de ce travail est de permettre d’appréhender l’incertitude et la précision de l’estimation d’une grandeur mesurable dans une population
+    <section class="project-section reveal">
+      <h2>Appliquer des méthodes d'estimations statistiques complexes.</h2>
+      
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Quel était l'objectif de notre travail ?</h2>
+      <p>
+        L’objectif de ce travail est de permettre d’appréhender l’incertitude et la précision de l’estimation d’une grandeur mesurable dans une population
             à l’aide d’un intervalle de confiance réalisé à partir d’un processus d’échantillonnage. Nous devions ensuite effectuer un test du Khi Deux et du V de Cramer
             sur un jeu de données concernant les primes d'assurance de différents modèles de voiture.
-        </p>
-        <h2>Comment avons nous procédé ?</h2>
-        <p><span>Ce processus d’échantillonnage s'est fait dans un premier temps par l’intermédiaire d’un sondage aléatoire simple à probabilités 
+      </p>
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Comment avons nous procédé ?</h2>
+      <p>
+        Ce processus d’échantillonnage s'est fait dans un premier temps par l’intermédiaire d’un sondage aléatoire simple à probabilités 
             égales (tous les individus 
             ont le même poids dans la population). 
             Dans un second temps, par l’intermédiaire d’un sondage ou d’un échantillonnage par strates (ou sondage stratifié). 
-            Nous nous sommes occupés ensuite de faire les tests statistiques sur le deuxième jeu de données. J'ai personnellement plus travaillé sur la seconde partie.</p>
-        <h2>Quelle note avons-nous obtenue ?</h2>
-        <p><span>Notre travail a obtenu la note de 13/20.</p>
-        <h2>Quelles sont mes compétences acquises ?</h2>
-        <p><span>Ce projet m'a permis d'appliquer les méthodes de calculs vues en cours de statistique inférentielle, avec le langage R. J'ai donc progressé en R.</p>
-        <a href="../../telechargements/saeStatInf.pdf" download>Cliquez ici pour télécharger ce projet !</a>
-        <a href="../../projects.html" class="back-button">Retour aux projets</a>
+            Nous nous sommes occupés ensuite de faire les tests statistiques sur le deuxième jeu de données. J'ai personnellement plus travaillé sur la seconde partie.
+      </p>
     </section>
 
-    <footer>
-        <p class="copyright">&copy; 2026 Rémi Pierron</p>
-    </footer>
+    <section class="project-section reveal">
+      <h2>Quelle note avons-nous obtenue ?</h2>
+      <p>
+        Notre travail a obtenu la note de 13/20.
+      </p>
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Quelles sont mes compétences acquises ?</h2>
+      <p>
+        Ce projet m'a permis d'appliquer les méthodes de calculs vues en cours de statistique inférentielle, avec le langage R. J'ai donc progressé en R.
+      </p>
+    </section>
+
+    <section class="project-section reveal">
+      <div class="project-links">
+        <a href="../../telechargements/saeStatInf.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Télécharger ce projet →</a>
+        <a href="../../projects.html" class="btn btn-secondary">← Retour aux projets</a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Rémi Pierron</span>
+      <p>&copy; 2026 — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="../../script/main.js"></script>
 </body>
 </html>

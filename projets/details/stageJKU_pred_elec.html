@@ -1,127 +1,113 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stage - Johannes Kepler Universität</title>
-    <link rel="stylesheet" href="../../styles.css"> <!-- Chemin relatif pour accéder au fichier CSS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Leaflet CSS pour OpenStreetMap -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <style>
-        /* Styles CSS spécifiques à cette page */
-        img {
-            display: block; /* Pour centrer horizontalement */
-            margin: 50px auto; /* Ajoute une marge en haut et en bas, et centre verticalement */
-            max-width: 100%; /* Largeur maximale de l'image */
-            max-height: 400px; /* Hauteur maximale de l'image */
-            border-radius: 10px; /* Coins arrondis */
-        }
-
-        h2 {
-            margin-top: 20px; /* Ajoute une marge en haut du titre */
-            margin-bottom: 10px; /* Ajoute une marge en bas du titre */
-        }
-
-        p {
-            margin-bottom: 20px; /* Ajoute une marge en bas du texte */
-        }
-        span {
-            font-family: Arial, sans-serif; /* Applique la police Arial aux balises span */
-        }
-        /* New flexbox styling for the image row */
-        .image-row {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        .image-row img {
-            margin: 0;
-            max-width: 30%;
-        }
-
-        
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage - Johannes Kepler Universität — Rémi Pierron</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>if (localStorage.getItem("theme") === "dark") { document.documentElement.setAttribute("data-theme", "dark"); }</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="title">
-                Stage / Johannes Kepler Universität Linz
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="../../index.html">Accueil</a></li>
-                    <li><a href="../../projects.html">Projets</a></li>
-                    <li><a href="../../about.html">À propos de moi</a></li>
-                    <li><a href="../../debrief.html">Mes études</a></li>
-                    <li><a href="../../contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <section>
-        <div class="pills-container">
-            <div class="pills">
-                <span class="pill">R</span>
-                <span class="pill">Python</span>
-                <span class="pill">Anglais</span>
-                <span class="pill">Machine Learning</span>
-                <span class="pill">Random Forest</span>
-                <span class="pill">XGBoost</span>
-                
-                <!-- Ajoutez d'autres logiciels utilisés si nécessaire -->
-            </div>
-            <div class="project-note">🇪🇺 ERASMUS de trois mois / Avril - Juin 2025</div>
-        </div>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../../index.html" class="navbar-brand"><span class="brand-dot"></span>Rémi Pierron</a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="navbar-nav">
+        <li><a href="../../index.html">Accueil</a></li>
+        <li><a href="../../projects.html">Projets</a></li>
+        <li><a href="../../about.html">À propos</a></li>
+        <li><a href="../../debrief.html">Mes études</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <a href="../index/stageJKU.html" class="back-link">Retour au stage JKU</a>
+
+    <!-- Header projet -->
+    <div class="project-detail-header fade-in">
+      <div class="section-label">🇪🇺 ERASMUS de trois mois / Avril - Juin 2025</div>
+      <h1>Stage / Johannes Kepler Universität Linz</h1>
+      <div class="pills" style="margin-top: 16px;">
+        <span class="pill">R</span>
+        <span class="pill">Python</span>
+        <span class="pill">Anglais</span>
+        <span class="pill">Machine Learning</span>
+        <span class="pill">Random Forest</span>
+        <span class="pill">XGBoost</span>
+      </div>
+      <div class="project-meta">
+        <span class="project-meta-item">👥 🇪🇺 ERASMUS de trois mois</span>
+        <span class="project-meta-item">📅 Avril - Juin 2025</span>
+        <span class="project-meta-item">🏛️ IUT de Poitiers — Niort</span>
+      </div>
+    </div>
+
+    <!-- Image principale -->
+    <section class="project-section reveal">
+      <img src="../../image/stock-35.png" alt="Description de votre image" class="content-img">
     </section>
-    
-    <section>
-        <h2>🇦🇹 Projet 1 : prédiction de la consommation d'électricité de la ville de Linz.</h2>
-        <img loading="lazy" decoding="async" src="../../image/stock-35.png" alt="Description de votre image">
+
+    <section class="project-section reveal">
+      <h2>🇦🇹 Projet 1 : prédiction de la consommation d'électricité de la ville de Linz.</h2>
+      
     </section>
-    <section>
-        <h2>📝 Quel était l'objectif de mon travail ?</h2>
-        <p><span>Mon travail consistait à prédire des données à l'aide de méthodes statistiques en langage R. J'ai utilisé la Régression Linéaire Multiple, puis 
+
+    <section class="project-section reveal">
+      <h2>📝 Quel était l'objectif de mon travail ?</h2>
+      <p>
+        Mon travail consistait à prédire des données à l'aide de méthodes statistiques en langage R. J'ai utilisé la Régression Linéaire Multiple, puis 
             le Machine Learning avec la méthode Random Forest. J'ai également été amené à utiliser des méthodes de nettoyage et de transformation de données.
-        </span></p>
+      </p>
     </section>
-    
-    <section>
-        <h2>🖥️ Comment ai-je procédé ?</h2>
-        <p><span>
-            J'ai commencé par analyser les données disponibles et à identifier les variables pertinentes pour la prédiction. Ensuite, j'ai appliqué des techniques 
+
+    <section class="project-section reveal">
+      <h2>🖥️ Comment ai-je procédé ?</h2>
+      <p>
+        J'ai commencé par analyser les données disponibles et à identifier les variables pertinentes pour la prédiction. Ensuite, j'ai appliqué des techniques 
             de nettoyage pour traiter les valeurs manquantes et les anomalies. J'ai ensuite utilisé la Régression Linéaire Multiple pour établir un modèle de 
             prédiction initial, puis j'ai affiné ce modèle en utilisant la méthode Random Forest, qui a permis d'améliorer la précision des prédictions.
-        </span></p>
+      </p>
     </section>
-    <section>
-        <img loading="lazy" decoding="async" src="../../image/stock-21.jpeg" alt="Description de votre image">
+
+    <section class="project-section reveal">
+      <h2>🤯 Quelles difficultés ai-je rencontrées ?</h2>
+      <p>
+        J'ai rencontré des difficultés pour trouver une méthode statistique efficace pour prédire les données, et c'est pour cela que j'ai utilisé
+            la méthode Random Forest, qui est une méthode d'apprentissage automatique.
+      </p>
     </section>
-    <section>
-        <h2>🤯 Quelles difficultés ai-je rencontrées ?</h2>
-        <p><span>J'ai rencontré des difficultés pour trouver une méthode statistique efficace pour prédire les données, et c'est pour cela que j'ai utilisé
-            la méthode Random Forest, qui est une méthode d'apprentissage automatique. 
-        </span></p>
-    </section>
-    <section>
-        <h2>✅ Quelles sont mes compétences acquises ?</h2>
-        <p><span>
-            J'ai acquis des compétences en analyse de données, en nettoyage de données, en modélisation statistique et en apprentissage automatique. J'ai également 
+
+    <section class="project-section reveal">
+      <h2>✅ Quelles sont mes compétences acquises ?</h2>
+      <p>
+        J'ai acquis des compétences en analyse de données, en nettoyage de données, en modélisation statistique et en apprentissage automatique. J'ai également 
             amélioré mes compétences en programmation R et ma capacité à travailler avec des ensembles de données complexes.
-        </span></p>
+      </p>
     </section>
 
-
-    <section>
-        <a href="../index/stageJKU.html" class="back-button">Retour aux projets</a>
+    <section class="project-section reveal">
+      <div class="project-links">
+        <a href="../index/stageJKU.html" class="btn btn-secondary">← Retour au stage JKU</a>
+      </div>
     </section>
 
-    <footer>
-        <p class="copyright">&copy; 2026 Rémi Pierron</p>
-    </footer>
+  </div>
 
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Rémi Pierron</span>
+      <p>&copy; 2026 — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="../../script/main.js"></script>
 </body>
 </html>

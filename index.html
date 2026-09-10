@@ -1,260 +1,212 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rémi Pierron - Accueil</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rémi Pierron — Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script>if (localStorage.getItem("theme") === "dark") { document.documentElement.setAttribute("data-theme", "dark"); }</script>
 </head>
-<style>
-        /* Styles pour les sections */
-        
-
-        .projects-section h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #000000;
-        }
-
-        /* Styles pour les cartes de projets */
-        .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .project-card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            text-align: center;
-            width: 300px;
-        }
-
-        .project-card h3 {
-            margin: 10px 0;
-            font-size: 18px;
-            color: #333;
-        }
-
-        .project-card a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: #000000;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .project-card a:hover {
-            background-color: #000000;
-            color: #fff;
-        }
-
-        /* Styles pour la frise chronologique */
-        .timeline-section {
-            background: #f9f9f9;
-            padding: 40px 20px;
-        }
-
-        .timeline-section h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 24px;
-            color: #000000;
-        }
-
-        .timeline-container {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .timeline-item {
-            margin: 10px 0;
-            padding-left: 40px;
-            position: relative;
-        }
-
-
-        .timeline-content {
-            background: #ffffff;
-            border-radius: 8px;
-            padding: 15px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .timeline-content h3 {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            color: #333;
-        }
-
-        .timeline-content p {
-            margin: 0;
-            color: #666;
-        }
-    </style>
 <body>
-    
-    <div class="wrapper">
-        <header>
-            <div class="header-content">
-                <div class="title">
-                    Bonjour, je m'appelle Rémi Pierron.
-                </div>
-                <div class="portrait">
-                    <img fetchpriority="high" decoding="sync" src="image/portrait.jpg" alt="Mon Portrait">
-                </div>
-            </div>
-            <br>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="projects.html">Projets</a></li>
-                    <li><a href="about.html">À propos de moi</a></li>
-                    <li><a href="debrief.html">Mes études</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
 
-        <div class="content">
-            <section id="about">
-                <h2>🚀 Bienvenue sur mon Portfolio</h2>
-                <p><span>📊 Je suis étudiant en troisième année de BUT Science des Données, et futur Data-Scientist !</span></p>
-                <!-- Lien pour télécharger le CV -->
-                <p><a href="telechargements/CV.pdf" download>📄 Télécharger mon CV</a></p>
-            </section>
-            
-            <!-- Section pour le clone numérique -->
-            <section id="chatbot">
-                <h2>💬 Discutez avec mon Clone Numérique</h2>
-                <p><span>Posez vos questions sur mon parcours, mes compétences et mes projets !</span></p>
-                <a href="https://chatbotportfolio-8ppsx33qjqnnsdftan9gkb.streamlit.app" target="_blank" rel="noopener noreferrer" class="chatbot-button">
-                    Discutez avec mon clone numérique
-                </a>
-            </section>
-        </div>
-
-        
-
-        <div class="image-gallery">
-            
-            <br>
-            <a href="debrief.html">
-                <img loading="lazy" decoding="async" src="image/sd.jpeg" alt="Image 2">
-            </a>
-            <a href="projets/index/stageJKU.html">
-                <img loading="lazy" decoding="async" src="image/jku.jpg" alt="Image 1">
-            </a>
-            <a href="projets/index/retourDePlage.html">
-                <img loading="lazy" decoding="async" src="image/rdp.jpeg" alt="Image 3">
-            </a>
-        </div>
-
-        <!-- Section de la frise chronologique -->
-        <section id="timeline" class="timeline-section">
-            <h2>Mon Parcours en BUT Science des Données</h2>
-            <div class="timeline-container">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Lycée - Année 2021/2023</h3>
-                        <p>Baccalauréat Général, spécialités Mathématiques, Physique Chimie et HGGSP.
-                        </p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3><a href="projets/index/projectsBUT1.html">BUT 1 - Année 2023/2024</a></h3>
-                        <p>Découverte des fondamentaux : statistiques, bases de données, programmation Python et R, introduction aux fondamentaux de la Data Science.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3><a href="projets/index/projectsBUT2.html">BUT 2 - Année 2024/2025</a></h3>
-                        <p>Approfondissement : datavisualisation, architecture data, gestion de projet et stage à l'étranger 🇦🇹</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3><a href="projets/index/projectsBUT3.html">BUT 3 - Année 2025/2026</a></h3>
-                        <p>Spécialisation : deep learning, réseaux de neurones, big data, alternance à Retour de Plage 🌊</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section des projets informatiques -->
-        <section id="projects-informatique" class="projects-section">
-            <h2>TOP 3 de mes meilleurs projets</h2>
-            <div class="projects-container">
-                
-                <div class="project-card">
-                    <img loading="lazy" decoding="async" src="image/stock-39.jpeg" alt="Réseaux de neurones : classification d'images">
-                    <h3>Réseaux de neurones : classification d'images</h3>
-                    <a href="projets/details/resNeur.html">Voir le projet</a>
-                </div>
-                <div class="project-card">
-                    <img loading="lazy" decoding="async" src="image/stock-21.jpeg" alt="Prédiction de la consommation électrique de la ville de Linz">
-                    <h3>Prédiction de la consommation électrique de la ville de Linz</h3>
-                    <a href="projets/details/stageJKU_pred_elec.html">Voir le projet</a>
-                </div>
-                <div class="project-card">
-                    <img loading="lazy" decoding="async" src="image/stock-33.jpeg" alt="Application d'annotations d'images avec Dash-Python">
-                    <h3>Application d'annotations d'images avec Dash-Python</h3>
-                    <a href="projets/details/vcodDash.html">Voir le projet</a>
-                </div>
-                
-            </div>
-        </section>
-
-        <!-- Nouvelle section : logos des logiciels -->
-        <div class="software-logos">
-            <h2>🛠️ Compétences Techniques</h2>
-            <div class="logos">
-                <a href="https://fr.wikipedia.org/wiki/Python_(langage)" target="_blank" rel="noopener noreferrer">
-                    <img loading="lazy" decoding="async" src="image/logos/python.png" alt="Python" title="Python">
-                </a>
-                <a href="https://fr.wikipedia.org/wiki/Visual_Studio_Code" target="_blank" rel="noopener noreferrer">
-                    <img loading="lazy" decoding="async" src="image/logos/vsc.png" alt="VS Code" title="Visual Studio Code">
-                </a>
-                <a href="https://fr.wikipedia.org/wiki/R_(langage)" target="_blank" rel="noopener noreferrer">
-                    <img loading="lazy" decoding="async" src="image/logos/R.png" alt="R" title="R">
-                </a>
-                <a href="https://fr.wikipedia.org/wiki/Microsoft_Excel" target="_blank" rel="noopener noreferrer">
-                    <img loading="lazy" decoding="async" src="image/logos/excel.png" alt="Excel" title="Excel">
-                </a>
-                <a href="https://fr.wikipedia.org/wiki/Structured_Query_Language" target="_blank" rel="noopener noreferrer">
-                    <img loading="lazy" decoding="async" src="image/logos/sql.png" alt="SQL" title="SQL">
-                </a>
-                <a href="https://fr.wikipedia.org/wiki/Git" target="_blank" rel="noopener noreferrer">
-                    <img loading="lazy" decoding="async" src="image/logos/git.png" alt="Git" title="Git">
-                </a>
-                <a href="https://fr.wikipedia.org/wiki/Visual_Basic_for_Applications" target="_blank" rel="noopener noreferrer">
-                    <img loading="lazy" decoding="async" src="image/logos/vba.png" alt="VBA" title="VBA">
-                </a>
-                <a href="https://fr.wikipedia.org/wiki/GitHub" target="_blank" rel="noopener noreferrer">
-                    <img loading="lazy" decoding="async" src="image/logos/GitHub.png" alt="GitHub" title="GitHub">
-                </a>
-                <a href="https://fr.wikipedia.org/wiki/TensorFlow" target="_blank" rel="noopener noreferrer">
-                    <img loading="lazy" decoding="async" src="image/logos/tensorflow.png" alt="TensorFlow" title="TensorFlow">
-                </a>
-                <a href="https://fr.wikipedia.org/wiki/Docker_(logiciel)" target="_blank" rel="noopener noreferrer">
-                    <img loading="lazy" decoding="async" src="image/logos/docker.png" alt="Docker" title="Docker">
-                </a>
-            </div>
-        </div>
-
-        <footer>
-            <p class="copyright">&copy; 2026 Rémi Pierron</p>
-        </footer>
+  <!-- ── Navbar ── -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand">
+        <span class="brand-dot"></span>Rémi Pierron
+      </a>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navbar-nav">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="debrief.html">Mes études</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
+  </nav>
 
+  <!-- ── Hero ── -->
+  <div class="page-wrapper">
+    <section class="hero fade-in">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-eyebrow">étudiant</div>
+          <h1>Hello, je suis <span>Rémi Pierron</span></h1>
+          <p class="hero-sub">
+            Étudiant en 3ème année de BUT Science des Données, spécialité VCOD (2023-2026).<br>
+            Assistant Science des Données chez Retour de Plage (2025-2026).<br>
+          </p>
+          <div class="hero-actions">
+            <a href="telechargements/CV.pdf" download class="btn btn-primary">
+              <i class="fa-solid fa-file-arrow-down"></i> Télécharger mon CV
+            </a>
+            <a href="projects.html" class="btn btn-secondary">Voir mes projets</a>
+            <a href="contact.html" class="btn btn-secondary">Me contacter</a>
+          </div>
+        </div>
+        <div class="hero-portrait">
+          <img src="image/portrait.jpg" alt="Portrait de Rémi Pierron" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Clone numérique ── -->
+    <section class="section reveal">
+      <div class="section-label">IA &amp; Portfolio</div>
+      <div class="section-heading">
+        <h2>💬 Mon Clone Numérique</h2>
+        <div class="section-heading-line"></div>
+      </div>
+      <a href="https://chatbotportfolio-8ppsx33qjqnnsdftan9gkb.streamlit.app" target="_blank" rel="noopener noreferrer" class="chatbot-cta" style="text-decoration:none;">
+        <div class="chatbot-icon">🤖</div>
+        <div class="chatbot-cta-text">
+          <h3>Discutez avec mon clone numérique</h3>
+          <p>Posez vos questions sur mon parcours, mes compétences et mes projets. Propulsé par un LLM entraîné sur mes données.</p>
+        </div>
+        <span class="btn btn-primary" style="flex-shrink:0;">Ouvrir →</span>
+      </a>
+    </section>
+
+    <!-- ── Parcours ── -->
+    <section class="section reveal">
+      <div class="section-label">Parcours</div>
+      <div class="section-heading">
+        <h2>Mon Parcours en BUT Science des Données</h2>
+        <div class="section-heading-line"></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2021 — 2023</div>
+          <div class="timeline-card">
+            <h3>Lycée</h3>
+            <p>Baccalauréat Général, spécialités Mathématiques, Physique-Chimie et HGGSP.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2023 — 2024</div>
+          <div class="timeline-card">
+            <h3><a href="projets/index/projectsBUT1.html">BUT 1 — Découverte</a></h3>
+            <p>Fondamentaux : statistiques, bases de données, programmation Python et R, introduction à la Data Science.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2024 — 2025</div>
+          <div class="timeline-card">
+            <h3><a href="projets/index/projectsBUT2.html">BUT 2 — Approfondissement</a></h3>
+            <p>Datavisualisation, architecture data, gestion de projet et stage Erasmus à Linz 🇦🇹</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2025 — 2026</div>
+          <div class="timeline-card">
+            <h3><a href="projets/index/projectsBUT3.html">BUT 3 — Spécialisation</a></h3>
+            <p>Deep learning, réseaux de neurones, big data, alternance à Retour de Plage 🌊</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Top 3 projets ── -->
+    <section class="section reveal">
+      <div class="section-label">Sélection</div>
+      <div class="section-heading">
+        <h2>Top 3 de mes meilleurs projets</h2>
+        <div class="section-heading-line"></div>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card fade-in fade-in-1">
+          <img class="project-card-img" src="image/stock-39.jpeg" alt="Réseaux de neurones : classification d'images" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Réseaux de neurones : classification d'images</div>
+            <div class="pills"><span class="pill">TensorFlow</span><span class="pill">Deep Learning</span></div>
+            <a href="projets/details/resNeur.html" class="project-card-link">Voir le projet</a>
+          </div>
+        </div>
+        <div class="project-card fade-in fade-in-2">
+          <img class="project-card-img" src="image/stock-21.jpeg" alt="Prédiction de consommation électrique" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Prédiction de la consommation électrique de Linz</div>
+            <div class="pills"><span class="pill">Python</span><span class="pill">ML</span></div>
+            <a href="projets/details/stageJKU_pred_elec.html" class="project-card-link">Voir le projet</a>
+          </div>
+        </div>
+        <div class="project-card fade-in fade-in-3">
+          <img class="project-card-img" src="image/stock-33.jpeg" alt="Application Dash d'annotations d'images" loading="lazy">
+          <div class="project-card-body">
+            <div class="project-card-title">Application d'annotations d'images avec Dash-Python</div>
+            <div class="pills"><span class="pill">Python</span><span class="pill">Dash</span></div>
+            <a href="projets/details/vcodDash.html" class="project-card-link">Voir le projet</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Compétences ── -->
+    <section class="section reveal">
+      <div class="section-label">Stack</div>
+      <div class="section-heading">
+        <h2>🛠️ Compétences Techniques</h2>
+        <div class="section-heading-line"></div>
+      </div>
+      <div class="skills-grid">
+        <a href="https://fr.wikipedia.org/wiki/Python_(langage)" target="_blank" rel="noopener noreferrer" class="skill-badge">
+          <img src="image/logos/python.png" alt="Python"> <span>Python</span>
+        </a>
+        <a href="https://fr.wikipedia.org/wiki/R_(langage)" target="_blank" rel="noopener noreferrer" class="skill-badge">
+          <img src="image/logos/R.png" alt="R"> <span>R</span>
+        </a>
+        <a href="https://fr.wikipedia.org/wiki/Structured_Query_Language" target="_blank" rel="noopener noreferrer" class="skill-badge">
+          <img src="image/logos/sql.png" alt="SQL"> <span>SQL</span>
+        </a>
+        <a href="https://fr.wikipedia.org/wiki/Visual_Basic_for_Applications" target="_blank" rel="noopener noreferrer" class="skill-badge">
+          <img src="image/logos/vba.png" alt="VBA"> <span>VBA</span>
+        </a>
+        <a href="https://fr.wikipedia.org/wiki/Microsoft_Excel" target="_blank" rel="noopener noreferrer" class="skill-badge">
+          <img src="image/logos/excel.png" alt="Excel"> <span>Excel</span>
+        </a>
+        <a href="https://fr.wikipedia.org/wiki/Git" target="_blank" rel="noopener noreferrer" class="skill-badge">
+          <img src="image/logos/git.png" alt="Git"> <span>Git</span>
+        </a>
+        <a href="https://fr.wikipedia.org/wiki/GitHub" target="_blank" rel="noopener noreferrer" class="skill-badge">
+          <img src="image/logos/GitHub.png" alt="GitHub"> <span>GitHub</span>
+        </a>
+        <a href="https://fr.wikipedia.org/wiki/Docker_(logiciel)" target="_blank" rel="noopener noreferrer" class="skill-badge">
+          <img src="image/logos/docker.png" alt="Docker"> <span>Docker</span>
+        </a>
+        <a href="https://fr.wikipedia.org/wiki/TensorFlow" target="_blank" rel="noopener noreferrer" class="skill-badge">
+          <img src="image/logos/tensorflow.png" alt="TensorFlow"> <span>TensorFlow</span>
+        </a>
+        <a href="https://fr.wikipedia.org/wiki/Visual_Studio_Code" target="_blank" rel="noopener noreferrer" class="skill-badge">
+          <img src="image/logos/vsc.png" alt="VS Code"> <span>VS Code</span>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- ── Animation Carapace ── -->
+  <div style="width: 100%; height: 80px; overflow: hidden; position: relative;">
+    <canvas id="canvas-shell" style="display: block; width: 100%; height: 100%;"></canvas>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Rémi Pierron</span>
+      <p>&copy; 2026 — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="script/main.js"></script>
 </body>
 </html>

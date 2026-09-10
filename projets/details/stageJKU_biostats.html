@@ -1,152 +1,110 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stage - Johannes Kepler Universität</title>
-    <link rel="stylesheet" href="../../styles.css"> <!-- Chemin relatif pour accéder au fichier CSS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Leaflet CSS pour OpenStreetMap -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <style>
-        /* Styles CSS spécifiques à cette page */
-        img {
-            display: block; /* Pour centrer horizontalement */
-            margin: 50px auto; /* Ajoute une marge en haut et en bas, et centre verticalement */
-            max-width: 100%; /* Largeur maximale de l'image */
-            max-height: 400px; /* Hauteur maximale de l'image */
-            border-radius: 10px; /* Coins arrondis */
-        }
-
-        h2 {
-            margin-top: 20px; /* Ajoute une marge en haut du titre */
-            margin-bottom: 10px; /* Ajoute une marge en bas du titre */
-        }
-
-        p {
-            margin-bottom: 20px; /* Ajoute une marge en bas du texte */
-        }
-        span {
-            font-family: Arial, sans-serif; /* Applique la police Arial aux balises span */
-        }
-        /* New flexbox styling for the image row */
-        .image-row {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        .image-row img {
-            margin: 0;
-            max-width: 30%;
-        }
-
-        
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage - Johannes Kepler Universität — Rémi Pierron</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>if (localStorage.getItem("theme") === "dark") { document.documentElement.setAttribute("data-theme", "dark"); }</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="title">
-                Stage / Johannes Kepler Universität Linz
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="../../index.html">Accueil</a></li>
-                    <li><a href="../../projects.html">Projets</a></li>
-                    <li><a href="../../about.html">À propos de moi</a></li>
-                    <li><a href="../../debrief.html">Mes études</a></li>
-                    <li><a href="../../contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <section>
-        <div class="pills-container">
-            <div class="pills">
-                <span class="pill">R</span>
-                <span class="pill">Python</span>
-                <span class="pill">Anglais</span>
 
-                
-                <!-- Ajoutez d'autres logiciels utilisés si nécessaire -->
-            </div>
-            <div class="project-note">🇪🇺 ERASMUS de trois mois / Avril - Juin 2025</div>
-        </div>
-    </section>
-    
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../../index.html" class="navbar-brand"><span class="brand-dot"></span>Rémi Pierron</a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="navbar-nav">
+        <li><a href="../../index.html">Accueil</a></li>
+        <li><a href="../../projects.html">Projets</a></li>
+        <li><a href="../../about.html">À propos</a></li>
+        <li><a href="../../debrief.html">Mes études</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <section>
-        <h2>🇦🇹 Projet 2 : étude biostatistique sur l'évolution de l'ADN des levures</h2>
-        <img loading="lazy" decoding="async" src="../../image/stock-30.jpeg" alt="Description de votre image">
+  <div class="page-wrapper">
+
+    <a href="../index/stageJKU.html" class="back-link">Retour au stage JKU</a>
+
+    <!-- Header projet -->
+    <div class="project-detail-header fade-in">
+      <div class="section-label">🇪🇺 ERASMUS de trois mois / Avril - Juin 2025</div>
+      <h1>Stage / Johannes Kepler Universität Linz</h1>
+      <div class="pills" style="margin-top: 16px;">
+        <span class="pill">R</span>
+        <span class="pill">Python</span>
+        <span class="pill">Anglais</span>
+      </div>
+      <div class="project-meta">
+        <span class="project-meta-item">👥 🇪🇺 ERASMUS de trois mois</span>
+        <span class="project-meta-item">📅 Avril - Juin 2025</span>
+        <span class="project-meta-item">🏛️ IUT de Poitiers — Niort</span>
+      </div>
+    </div>
+
+    <!-- Image principale -->
+    <section class="project-section reveal">
+      <img src="../../image/stock-30.jpeg" alt="Description de votre image" class="content-img">
     </section>
-    <section>
-        <h2>📝 Quel était l'objectif de mon travail ?</h2>
-        <p><span>Mon travail avait pour but de reproduire une étude biostatistique sur l'évolution de l'ADN des levures, en utilisant des méthodes statistiques avancées. 
+
+    <section class="project-section reveal">
+      <h2>🇦🇹 Projet 2 : étude biostatistique sur l'évolution de l'ADN des levures</h2>
+      
+    </section>
+
+    <section class="project-section reveal">
+      <h2>📝 Quel était l'objectif de mon travail ?</h2>
+      <p>
+        Mon travail avait pour but de reproduire une étude biostatistique sur l'évolution de l'ADN des levures, en utilisant des méthodes statistiques avancées. 
             J'ai utilisé le langage R pour effectuer des analyses de données.
             L'objectif était de comprendre comment les mutations génétiques influencent l'évolution des levures au fil du temps.
-        </span></p>
+      </p>
     </section>
-    
-    <section>
-        <h2>🖥️ Comment ai-je procédé ?</h2>
-        <p><span>
-            La première étape à été de comprendre l'étude originale et les méthodes statistiques utilisées. J'ai ensuite collecté les données nécessaires et
+
+    <section class="project-section reveal">
+      <h2>🖥️ Comment ai-je procédé ?</h2>
+      <p>
+        La première étape à été de comprendre l'étude originale et les méthodes statistiques utilisées. J'ai ensuite collecté les données nécessaires et
             j'ai appliqué des techniques de nettoyage et de transformation des données, afin de pouvoir retrouver les résultats de l'étude originale.
-        </span></p>
+      </p>
     </section>
-    <section>
-        <img loading="lazy" decoding="async" src="../../image/stock-31.jpeg" alt="Description de votre image">
-    </section>
-    <section>
-        <h2>🤯 Quelles difficultés ai-je rencontrées ?</h2>
-        <p><span>
-            J'ai rencontré des difficultés pour reproduire l'étude originale, car les données étaient complexes et nécessitaient une compréhension approfondie des 
+
+    <section class="project-section reveal">
+      <h2>🤯 Quelles difficultés ai-je rencontrées ?</h2>
+      <p>
+        J'ai rencontré des difficultés pour reproduire l'étude originale, car les données étaient complexes et nécessitaient une compréhension approfondie des 
             méthodes statistiques utilisées. De plus, j'ai dû m'adapter à des outils et des techniques que je n'avais pas utilisés auparavant.
-        </span></p>
+      </p>
     </section>
-    <section>
-        <h2>✅ Quelles sont mes compétences acquises ?</h2>
-        <p><span>
-            J'ai acquis des compétences en biostatistique, en analyse de données génétiques et en utilisation avancée du langage R. J'ai également amélioré ma capacité 
+
+    <section class="project-section reveal">
+      <h2>✅ Quelles sont mes compétences acquises ?</h2>
+      <p>
+        J'ai acquis des compétences en biostatistique, en analyse de données génétiques et en utilisation avancée du langage R. J'ai également amélioré ma capacité 
             à reproduire des études scientifiques et à comprendre les implications des résultats statistiques dans le contexte de la biologie évolutive.
-        </span></p>
+      </p>
     </section>
 
-    
+    <section class="project-section reveal">
+      <div class="project-links">
+        <a href="../index/stageJKU.html" class="btn btn-secondary">← Retour au stage JKU</a>
+      </div>
     </section>
-    <section>
-        <a href="../index/stageJKU.html" class="back-button">Retour aux projets</a>
-    </section>
 
-    <footer>
-        <p class="copyright">&copy; 2026 Rémi Pierron</p>
-    </footer>
+  </div>
 
-    <!-- Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script>
-        // Fix for marker icon issue with Leaflet
-        delete L.Icon.Default.prototype._getIconUrl;
-        L.Icon.Default.mergeOptions({
-            iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
-            iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
-            shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png'
-        });
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Rémi Pierron</span>
+      <p>&copy; 2026 — Tous droits réservés</p>
+    </div>
+  </footer>
 
-        // Initialiser la carte centrée sur la JKU de Linz
-        var map = L.map('map').setView([48.3367, 14.3198], 15);
-
-        // Ajouter les tuiles OpenStreetMap
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-            maxZoom: 19
-        }).addTo(map);
-
-        // Ajouter un marqueur sur la JKU
-        var marker = L.marker([48.3367, 14.3198]).addTo(map);
-        marker.bindPopup('<b>Johannes Kepler Universität Linz</b><br>Altenberger Straße 69, 4040 Linz, Autriche').openPopup();
-    </script>
+  <script src="../../script/main.js"></script>
 </body>
 </html>
