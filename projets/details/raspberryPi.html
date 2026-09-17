@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serveur personnel sur Raspberry Pi 5 — Rémi Pierron</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>if (localStorage.getItem("theme") === "dark") { document.documentElement.setAttribute("data-theme", "dark"); }</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../../index.html" class="navbar-brand"><span class="brand-dot"></span>Rémi Pierron</a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="navbar-nav">
+        <li><a href="../../index.html">Accueil</a></li>
+        <li><a href="../../projects.html">Projets</a></li>
+        <li><a href="../../about.html">À propos</a></li>
+        <li><a href="../../debrief.html">Mes études</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <a href="../../projects.html" class="back-link">Retour aux projets</a>
+
+    <!-- Header projet -->
+    <div class="project-detail-header fade-in">
+      <div class="section-label">Projet mené seul - Depuis août 2026</div>
+      <h1>Serveur personnel auto-hébergé sur Raspberry Pi 5</h1>
+      <div class="pills" style="margin-top: 16px;">
+        <span class="pill">Docker</span>
+        <span class="pill">Linux</span>
+        <span class="pill">Tailscale</span>
+        <span class="pill">Docker Compose</span>
+        <span class="pill">Netdata</span>
+        <span class="pill">GPIO / I2C</span>
+      </div>
+      <div class="project-meta">
+        <span class="project-meta-item">👥 Projet mené seul</span>
+        <span class="project-meta-item">📅 Depuis août 2026</span>
+        <span class="project-meta-item">Niort</span>
+      </div>
+    </div>
+
+    <!-- Image principale -->
+    <section class="project-section reveal">
+      <img src="../../image/stock-49.jpeg" alt="Tableau de bord Netdata du serveur Raspberry Pi 5" class="content-img">
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Un Raspberry Pi 5 comme serveur personnel</h2>
+      <p>
+        En parallèle de mes projets personnels (<a href="techWatch.html">veille tech</a>,
+        <a href="gardenTracker.html">suivi de plantes</a>, <a href="cafeTracker.html">CaféTracker</a>...), j'ai
+        transformé un Raspberry Pi 5 en petit serveur domestique capable de les faire tourner en continu, sans
+        dépendre de mon ordinateur principal. Chaque projet vit dans son propre conteneur Docker, accessible depuis
+        mon réseau personnel via un VPN, et le tout est surveillé et documenté comme une vraie infrastructure, à
+        échelle réduite.
+      </p>
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Quel était l'objectif de mon travail ?</h2>
+      <p>
+        L'objectif était de disposer d'une machine allumée en permanence, économe en énergie, capable d'héberger
+        plusieurs applications indépendantes les unes des autres. J'ai installé Debian 13 (arm64) sur le Raspberry
+        Pi 5 et mis en place une administration entièrement à distance : accès SSH et VPN maillé avec Tailscale
+        pour joindre la machine depuis n'importe où sans exposer le moindre port sur Internet, VNC (wayvnc) gardé
+        désactivé par défaut et lancé seulement au besoin. Chaque projet est ensuite packagé et lancé via Docker
+        Compose selon une convention commune (<code>~/docker/appN/...</code>), avec un port dédié et des limites de
+        ressources adaptées à une carte à 16 Go de RAM (quotas mémoire, systèmes de fichiers en lecture seule et
+        restrictions de privilèges quand c'est pertinent). J'ai ajouté Netdata pour suivre en temps réel la charge
+        CPU, la mémoire et le stockage d'une machine aux ressources contraintes, et activé les outils GPIO/I2C pour
+        interfacer un capteur BME280 dans le cadre d'un projet de prédiction météo de pièce. J'ai également testé
+        l'inférence locale de modèles de langage avec Ollama pour le projet de veille tech, avant de basculer vers
+        une API cloud (Mistral) une fois le coût en ressources jugé trop élevé pour le Pi. Enfin, je tiens à jour
+        une documentation unique de l'état de la machine (matériel, réseau, services, ports exposés) pour que le
+        serveur reste maintenable dans le temps.
+      </p>
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Quelles sont mes compétences acquises ?</h2>
+      <p>
+        Ce projet m'a permis de développer des compétences d'administration système Linux sur architecture ARM64,
+        avec la gestion de services systemd et le durcissement d'un accès distant (SSH, VPN Tailscale plutôt que
+        des ports ouverts publiquement). J'ai renforcé ma maîtrise de Docker et Docker Compose pour orchestrer
+        plusieurs applications indépendantes sur une même machine, avec des contraintes de ressources et des options
+        de sécurisation des conteneurs. J'ai également acquis des compétences en interfaçage matériel (GPIO, I2C)
+        avec un capteur physique, en supervision/observabilité avec Netdata, et développé mon sens du compromis
+        technique en arbitrant entre inférence de modèles de langage en local et via une API cloud selon les
+        ressources disponibles. Enfin, ce projet m'a appris la rigueur de documentation d'une infrastructure
+        personnelle, pour qu'elle reste compréhensible et évolutive même après plusieurs mois.
+      </p>
+    </section>
+
+    <section class="project-section reveal">
+      <div class="project-links">
+        <a href="../../projects.html" class="btn btn-secondary">← Retour aux projets</a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Rémi Pierron</span>
+      <p>&copy; 2026 — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="../../script/main.js"></script>
+</body>
+</html>

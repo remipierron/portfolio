@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Application de répertoire botanique — Rémi Pierron</title>
+  <title>Suivi de Plantes d'Intérieur — Rémi Pierron</title>
   <link rel="stylesheet" href="../../styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,14 +33,13 @@
 
     <!-- Header projet -->
     <div class="project-detail-header fade-in">
-      <div class="section-label">Projet mené seul - Mars 2026</div>
-      <h1>Application de répertoire botanique</h1>
+      <div class="section-label">Projet mené seul - Mai 2026</div>
+      <h1>Suivi de Plantes d'Intérieur</h1>
       <div class="pills" style="margin-top: 16px;">
         <span class="pill">Python</span>
         <span class="pill">Streamlit</span>
-        <span class="pill">Docker</span>
-        <span class="pill">PlantNet</span>
-        <span class="pill">GitHub</span>
+        <span class="pill">SQLite</span>
+        <span class="pill">Pl@ntNet API</span>
       </div>
       <div class="project-meta">
         <span class="project-meta-item">👥 Projet mené seul</span>
@@ -51,37 +50,46 @@
 
     <!-- Image principale -->
     <section class="project-section reveal">
-      <img src="../../image/stock-47.png" alt="Description de votre image" class="content-img">
+      <img src="../../image/stock-47.png" alt="Interface de l'application de suivi de plantes d'intérieur" class="content-img">
     </section>
 
     <section class="project-section reveal">
-      <h2>Application de répertoire botanique</h2>
-      
+      <h2>Suivi de Plantes d'Intérieur</h2>
+      <p>
+        Il s'agit d'une application de répertoire botanique qui permet de recenser, d'identifier et de suivre les plantes de son intérieur.
+        Les végétaux photographiés sont identifiés automatiquement à l'aide de l'API Pl@ntNet et sont stockés localement dans une base
+        de données SQLite unique (images incluses), ce qui rend le projet entièrement portable.
+      </p>
     </section>
 
     <section class="project-section reveal">
       <h2>Quel était l'objectif de mon travail ?</h2>
       <p>
-        L'application de répertoire botanique a pour objectif de permettre aux utilisateurs de cataloguer et de rechercher des plantes à partir d'images. 
-        Elle utilise une base de données SQLite pour stocker les informations sur les plantes et leurs images, et un modèle de reconnaissance d'images Pl@antNet
-        pour identifier les espèces végétales. J'ai utilisé Streamlit pour créer une interface utilisateur simple et intuitive.
-        J'ai aussi utilisé Docker pour containeriser l'application, facilitant ainsi son déploiement et sa portabilité. L'application fonctionne sur le réseau local permettant de l'utiliser
-        depuis n'importe quel appareil connecté au même réseau.
+        L'objectif était de créer une application permettant de cataloguer et d'identifier facilement les plantes d'intérieur à partir
+        de simples photos. Elle s'appuie sur l'API de reconnaissance d'images Pl@ntNet pour obtenir le nom commun et scientifique de
+        chaque plante, et sur une base de données SQLite pour centraliser l'historique, les notes et les dates d'acquisition. J'ai utilisé
+        Streamlit pour construire une interface web simple et conviviale, avec une galerie permettant de visualiser sa collection et de
+        suivre l'évolution de chaque plante grâce à plusieurs photos dans le temps. Les images sont compressées via Pillow et stockées
+        directement en BLOB dans la base SQLite afin de limiter la taille du fichier et de garder tout le projet portable dans un seul
+        fichier.
       </p>
     </section>
 
     <section class="project-section reveal">
       <h2>Quelles sont mes compétences acquises ?</h2>
       <p>
-        Ce projet m'a permis de renforcer mes compétences en développement d'applications web avec Streamlit, en gestion de bases de données avec SQLite, et en utilisation de modèles de reconnaissance d'images. 
-        J'ai également acquis une expérience précieuse en containerisation avec Docker, ce qui m'a permis de comprendre les meilleures pratiques pour le déploiement d'applications. 
-        Enfin, j'ai amélioré mes compétences en gestion de projet et en documentation, en veillant à ce que le code soit bien structuré et facile à comprendre pour les futurs utilisateurs ou développeurs.
+        Ce projet m'a permis de renforcer mes compétences en développement d'applications web avec Streamlit, en gestion de bases de
+        données avec SQLite (notamment le stockage d'images en BLOB), et en intégration d'API externes de reconnaissance d'images avec
+        Pl@ntNet. J'ai également travaillé le traitement et la compression d'images avec Pillow, ainsi que la gestion de configuration
+        et de secrets via des variables d'environnement (python-dotenv). Enfin, j'ai amélioré mes compétences en gestion de projet et en
+        documentation, en veillant à ce que le code soit bien structuré et facile à comprendre pour les futurs utilisateurs ou
+        développeurs.
       </p>
     </section>
 
     <section class="project-section reveal">
       <div class="project-links">
-        <a href="https://github.com/rpierr01/Garden_Tracker" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub — Voir le repository →</a>
+        <a href="https://github.com/remipierron/suivi_plantes" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub — Voir le repository →</a>
         <a href="../../projects.html" class="btn btn-secondary">← Retour aux projets</a>
       </div>
     </section>

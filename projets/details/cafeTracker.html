@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CaféTracker — Rémi Pierron</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>if (localStorage.getItem("theme") === "dark") { document.documentElement.setAttribute("data-theme", "dark"); }</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../../index.html" class="navbar-brand"><span class="brand-dot"></span>Rémi Pierron</a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="navbar-nav">
+        <li><a href="../../index.html">Accueil</a></li>
+        <li><a href="../../projects.html">Projets</a></li>
+        <li><a href="../../about.html">À propos</a></li>
+        <li><a href="../../debrief.html">Mes études</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <a href="../../projects.html" class="back-link">Retour aux projets</a>
+
+    <!-- Header projet -->
+    <div class="project-detail-header fade-in">
+      <div class="section-label">Projet mené seul - Septembre 2026</div>
+      <h1>CaféTracker — Suivi de consommation de café</h1>
+      <div class="pills" style="margin-top: 16px;">
+        <span class="pill">Python</span>
+        <span class="pill">Streamlit</span>
+        <span class="pill">SQLite</span>
+        <span class="pill">Plotly</span>
+        <span class="pill">Docker</span>
+      </div>
+      <div class="project-meta">
+        <span class="project-meta-item">👥 Projet mené seul</span>
+        <span class="project-meta-item">📅 Septembre 2026</span>
+        <span class="project-meta-item">Niort</span>
+      </div>
+    </div>
+
+    <!-- Image principale -->
+    <section class="project-section reveal">
+      <img src="../../image/stock-50.png" alt="Tableau de bord de l'application CaféTracker" class="content-img">
+    </section>
+
+    <section class="project-section reveal">
+      <h2>CaféTracker</h2>
+      <p>
+        CaféTracker est une application de suivi de consommation de café qui modélise, prise après prise, le taux
+        de caféine restant dans l'organisme. L'objectif est très concret : aider à repérer le moment à partir duquel
+        une nouvelle tasse risque de perturber le sommeil, en se basant sur un modèle pharmacocinétique personnalisé
+        plutôt que sur une règle générique identique pour tout le monde. L'application est multi-utilisateurs,
+        packagée en Docker et déployée en continu sur un Raspberry Pi 5 à la maison.
+      </p>
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Quel était l'objectif de mon travail ?</h2>
+      <p>
+        L'objectif était de construire, du modèle scientifique jusqu'à l'interface, une application permettant
+        d'enregistrer ses prises de café (type de boisson, quantité, dose de caféine, horodatage) et de visualiser
+        sous forme de courbe l'évolution estimée du taux de caféine dans le sang sur 24 heures glissantes, avec un
+        seuil de vigilance au coucher. Le calcul repose sur un modèle à un compartiment avec absorption d'ordre 1
+        (fonction de Bateman) : le volume de distribution de la caféine est dérivé de la masse maigre de
+        l'utilisateur (poids, taille, formule de Boer), ce qui personnalise la décroissance plutôt que d'appliquer
+        une demi-vie moyenne identique à tous. Les prises multiples se cumulent par superposition pour donner la
+        courbe globale affichée sur le tableau de bord, avec une suggestion d'heure limite pour une dernière tasse
+        sans compromettre la nuit. Au-delà du calcul, j'ai géré l'authentification et l'isolation des données entre
+        plusieurs comptes utilisateurs, ainsi que le packaging Docker de l'ensemble pour un déploiement durable sur
+        un Raspberry Pi 5, en veillant à séparer clairement la logique métier (testable indépendamment), l'accès aux
+        données et l'interface. J'ai également documenté et assumé par écrit les écarts pris par rapport au cahier
+        des charges initial lorsque certaines formules ou seuils proposés produisaient des résultats incohérents.
+      </p>
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Quelles sont mes compétences acquises ?</h2>
+      <p>
+        Ce projet m'a permis d'approfondir la modélisation pharmacocinétique et sa traduction en code Python pur,
+        testable indépendamment de toute base de données ou interface. J'ai renforcé mes compétences en
+        développement d'applications multi-utilisateurs avec Streamlit (authentification, isolation des données par
+        utilisateur), en gestion de bases SQLite, et en visualisation de données avec Plotly. J'ai aussi consolidé
+        mes pratiques de conteneurisation avec Docker et Docker Compose, jusqu'au déploiement et au fonctionnement
+        en continu sur un Raspberry Pi 5 (architecture ARM64). Enfin, j'ai travaillé la qualité logicielle avec une
+        suite de tests couvrant le modèle, la base de données, l'authentification et les statistiques, y compris des
+        tests de bout en bout qui exécutent réellement l'application, ainsi que la rigueur de documentation en
+        justifiant explicitement les choix techniques qui s'écartaient de la spécification de départ.
+      </p>
+    </section>
+
+    <section class="project-section reveal">
+      <div class="project-links">
+        <a href="https://github.com/remipierron/suivi_cafe" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub — Voir le repository →</a>
+        <a href="../../projects.html" class="btn btn-secondary">← Retour aux projets</a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Rémi Pierron</span>
+      <p>&copy; 2026 — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="../../script/main.js"></script>
+</body>
+</html>
