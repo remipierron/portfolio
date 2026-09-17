@@ -1,0 +1,123 @@
+<!--
+  TEMPLATE DE PAGE PROJET
+  =======================
+  Pour créer un nouveau projet :
+  1. Copier ce fichier dans projets/details/ et le renommer (ex: monProjet.html).
+  2. Remplacer tous les [texte entre crochets] par le contenu réel.
+  3. Ajouter/retirer des <section class="project-section reveal"> selon les besoins.
+  4. Ajouter une carte vers ce projet dans la page d'index correspondante
+     (projets/index/projectsIngX.html, projectsBUTX.html, etc.) et éventuellement
+     dans projects.html.
+-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Titre du projet] — Rémi Pierron</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>if (localStorage.getItem("theme") === "dark") { document.documentElement.setAttribute("data-theme", "dark"); }</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../../index.html" class="navbar-brand"><span class="brand-dot"></span>Rémi Pierron</a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="navbar-nav">
+        <li><a href="../../index.html">Accueil</a></li>
+        <li><a href="../../projects.html">Projets</a></li>
+        <li><a href="../../about.html">À propos</a></li>
+        <li><a href="../../debrief.html">Mes études</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <a href="../../projects.html" class="back-link">Retour aux projets</a>
+
+    <!-- Header projet -->
+    <div class="project-detail-header fade-in">
+      <div class="section-label">[Projet mené seul / en groupe de X] — [mois année]</div>
+      <h1>[Titre du projet]</h1>
+      <div class="pills" style="margin-top: 16px;">
+        <span class="pill">[Techno 1]</span>
+        <span class="pill">[Techno 2]</span>
+        <span class="pill">[Techno 3]</span>
+      </div>
+      <div class="project-meta">
+        <span class="project-meta-item">👥 [Seul / En groupe de X]</span>
+        <span class="project-meta-item">📅 [mois année]</span>
+        <span class="project-meta-item">🏛️ [Établissement / entreprise]</span>
+      </div>
+    </div>
+
+    <!-- Image principale -->
+    <section class="project-section reveal">
+      <img src="../../image/[nom-image].jpeg" alt="[Description de l'image]" class="content-img">
+    </section>
+
+    <section class="project-section reveal">
+      <h2>[Phrase d'accroche résumant le projet]</h2>
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Quel était l'objectif de ce travail ?</h2>
+      <p>
+        [Décrire les objectifs du projet.]
+      </p>
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Comment avons-nous procédé ?</h2>
+      <p>
+        [Décrire la méthode / les étapes suivies.]
+      </p>
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Quelles difficultés avons-nous rencontrées ?</h2>
+      <p>
+        [Décrire les difficultés rencontrées et comment elles ont été résolues.]
+      </p>
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Quelle note avons-nous obtenue ?</h2>
+      <p>
+        [Note obtenue, si applicable.]
+      </p>
+    </section>
+
+    <section class="project-section reveal">
+      <h2>Quelles sont mes compétences acquises ?</h2>
+      <p>
+        [Décrire les compétences et connaissances acquises.]
+      </p>
+    </section>
+
+    <section class="project-section reveal">
+      <div class="project-links">
+        <a href="../../telechargements/[fichier].pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Télécharger ce projet →</a>
+        <a href="../../projects.html" class="btn btn-secondary">← Retour aux projets</a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Rémi Pierron</span>
+      <p>&copy; 2026 — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="../../script/main.js"></script>
+</body>
+</html>
